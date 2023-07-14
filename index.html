@@ -6,5 +6,32 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Proyecto Final Teach Tech</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Test de colorimetria!</h1>
+      <p>Obtiene los colores que más te favorecen según tus características.</p>
+    </header>
+    <main>
+      <section id="intro">
+        <p>
+          El primer paso es determinar la temperatura del color. Hay que
+          determinar si somos de paleta fría o cálida.
+        </p>
+      </section>
+      <section id="color-display">
+        <div id="color-1"><p id="text-color-1">Paleta fría</p></div>
+        <div id="image"></div>
+        <div id="color-2"><p id="text-color-2">Paleta cálida</p></div>
+      </section>
+      <section id="answers">
+        <form>
+          <label for="answer-1-option-1">Paleta fría:</label>
+          <input id="answer-1-option-1" type="radio" name="answer-1-option-1" />
+          <label for="answer-1-option-2">Paleta cálida:</label>
+          <input id="answer-1-option-2" type="radio" name="answer-1-option-2" />
+          <input type="submit" value="Save" />
+        </form>
+      </section>
+    </main>
+  </body>
 </html>
