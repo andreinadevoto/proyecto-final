@@ -4,34 +4,243 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Proyecto Final Teach Tech</title>
   </head>
   <body>
     <header>
-      <h1>Test de colorimetria!</h1>
-      <p>Obtiene los colores que más te favorecen según tus características.</p>
+      <h1 id="title-header">Test de colorimetria!</h1>
+      <p id="info-header">
+        Obtiene los colores que más te favorecen según tus características.
+      </p>
+      <a href="#intro" id="link-header">Comenzar!</a>
     </header>
     <main>
       <section id="intro">
-        <p>
+        <p id="step">Paso: 1</p>
+        <p id="number-of-question">Pregunta: 1/12</p>
+        <p id="step-info">
           El primer paso es determinar la temperatura del color. Hay que
-          determinar si somos de paleta fría o cálida.
+          determinar si somos de paleta fría o cálida. Es importante no elegir
+          los colores según nuestra preferencia, sino prestar atención a cual
+          resalta mejor nuestras carcterísticas. Para realizar el test es
+          importante que la foto a utilizar no tenga fondo, que el rostro se
+          encuentre despejado, sin maquillaje ni accesorios.
         </p>
       </section>
       <section id="color-display">
-        <div id="color-1"><p id="text-color-1">Paleta fría</p></div>
-        <div id="image"></div>
-        <div id="color-2"><p id="text-color-2">Paleta cálida</p></div>
+        <div id="color-1"></div>
+        <div id="image-container"><img src="foto-andre.png" id="image" /></div>
+        <div id="color-2"></div>
       </section>
       <section id="answers">
-        <form>
-          <label for="answer-1-option-1">Paleta fría:</label>
-          <input id="answer-1-option-1" type="radio" name="answer-1-option-1" />
-          <label for="answer-1-option-2">Paleta cálida:</label>
-          <input id="answer-1-option-2" type="radio" name="answer-1-option-2" />
-          <input type="submit" value="Save" />
+        <form name="forms" id="forms">
+          <div class="answer" name="answer">
+            <label for="option-1" class="answer-label" id="option-1"
+              >Paleta fría</label
+            >
+            <input
+              id="radio-option-1"
+              type="radio"
+              name="answer_1"
+              value="option-1"
+            />
+          </div>
+          <div class="answer">
+            <label for="option-2" class="answer-label" id="option-2"
+              >Paleta cálida</label
+            >
+            <input
+              id="radio-option-2"
+              type="radio"
+              name="answer_1"
+              value="option-2"
+            />
+          </div>
+          <input type="submit" value="Proxima pregunta" id="submit-answer" />
         </form>
+        <div id="results">Resultados</div>
+        <div id="summary">
+          <p id="palette-selection"></p>
+          <!--<p id="tone-selection"></p>-->
+          <p id="season-selection"></p>
+          <p id="final-season-selection"></p>
+        </div>
+      </section>
+
+      <section id="seasons-info">
+        <div class="season-tile">
+          <div class="season-name">Primavera Pura</div>
+          <div class="season-view">
+            <div id="sp1">Color 1</div>
+            <div id="sp2">Color 2</div>
+            <div id="sp3">Color 3</div>
+            <div id="sp4">Color 4</div>
+            <div id="sp5">Color 5</div>
+            <div id="sp6">Color 6</div>
+            <div id="sp7">Color 7</div>
+            <div id="sp8">Color 8</div>
+            <div id="sp9">Color 9</div>
+            <div id="sp10">Color 10</div>
+            <div id="sp11">Color 11</div>
+            <div id="sp12">Color 12</div>
+            <div id="sp13">Color 13</div>
+            <div id="sp14">Color 14</div>
+            <div id="sp15">Color 15</div>
+            <div id="sp16">Color 16</div>
+            <div id="sp17">Color 17</div>
+            <div id="sp18">Color 18</div>
+            <div id="sp19">Color 19</div>
+            <div id="sp20">Color 20</div>
+            <div id="sp21">Color 21</div>
+            <div id="sp22">Color 22</div>
+            <div id="sp23">Color 23</div>
+            <div id="sp24">Color 24</div>
+            <div id="sp25">Color 25</div>
+            <div id="sp26">Color 26</div>
+            <div id="sp27">Color 27</div>
+            <div id="sp28">Color 28</div>
+            <div id="sp29">Color 29</div>
+            <div id="sp30">Color 30</div>
+            <div id="sp31">Color 31</div>
+            <div id="sp32">Color 32</div>
+            <div id="sp33">Color 33</div>
+            <div id="sp34">Color 34</div>
+            <div id="sp35">Color 35</div>
+            <div id="sp36">Color 36</div>
+            <div id="sp37">Color 37</div>
+            <div id="sp38">Color 38</div>
+            <div id="sp39">Color 39</div>
+            <div id="sp40">Color 40</div>
+          </div>
+          <div class="season-info">
+            Esta primavera es la más brillante y saturada de las cuatro. No
+            encontraremos en su paleta colores apagados o neutros. Los colores
+            que mejor le van son los cálidos saturados, aunque pueden llevar muy
+            bien algunos fríos brillantes. Lo mejor es evitar los colores
+            terrosos o demasiado pálidos, ya que le darán una apariencia muy
+            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
+            serán los que llamen la atención por su brillo, mientras que su piel
+            será dorada o bronce y su cabello con luminosidad.
+          </div>
+        </div>
+        <div class="season-tile">
+          <div class="season-name">Primavera Pura</div>
+          <div class="season-view">
+            <div id="sp1">Color 1</div>
+            <div id="sp2">Color 2</div>
+            <div id="sp3">Color 3</div>
+            <div id="sp4">Color 4</div>
+            <div id="sp5">Color 5</div>
+            <div id="sp6">Color 6</div>
+            <div id="sp7">Color 7</div>
+            <div id="sp8">Color 8</div>
+            <div id="sp9">Color 9</div>
+            <div id="sp10">Color 10</div>
+            <div id="sp11">Color 11</div>
+            <div id="sp12">Color 12</div>
+            <div id="sp13">Color 13</div>
+            <div id="sp14">Color 14</div>
+            <div id="sp15">Color 15</div>
+            <div id="sp16">Color 16</div>
+            <div id="sp17">Color 17</div>
+            <div id="sp18">Color 18</div>
+            <div id="sp19">Color 19</div>
+            <div id="sp20">Color 20</div>
+            <div id="sp21">Color 21</div>
+            <div id="sp22">Color 22</div>
+            <div id="sp23">Color 23</div>
+            <div id="sp24">Color 24</div>
+            <div id="sp25">Color 25</div>
+            <div id="sp26">Color 26</div>
+            <div id="sp27">Color 27</div>
+            <div id="sp28">Color 28</div>
+            <div id="sp29">Color 29</div>
+            <div id="sp30">Color 30</div>
+            <div id="sp31">Color 31</div>
+            <div id="sp32">Color 32</div>
+            <div id="sp33">Color 33</div>
+            <div id="sp34">Color 34</div>
+            <div id="sp35">Color 35</div>
+            <div id="sp36">Color 36</div>
+            <div id="sp37">Color 37</div>
+            <div id="sp38">Color 38</div>
+            <div id="sp39">Color 39</div>
+            <div id="sp40">Color 40</div>
+          </div>
+          <div class="season-info">
+            Esta primavera es la más brillante y saturada de las cuatro. No
+            encontraremos en su paleta colores apagados o neutros. Los colores
+            que mejor le van son los cálidos saturados, aunque pueden llevar muy
+            bien algunos fríos brillantes. Lo mejor es evitar los colores
+            terrosos o demasiado pálidos, ya que le darán una apariencia muy
+            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
+            serán los que llamen la atención por su brillo, mientras que su piel
+            será dorada o bronce y su cabello con luminosidad.
+          </div>
+        </div>
+        <div class="season-tile">
+          <div class="season-name">Primavera Pura</div>
+          <div class="season-view">
+            <div id="sp1">Color 1</div>
+            <div id="sp2">Color 2</div>
+            <div id="sp3">Color 3</div>
+            <div id="sp4">Color 4</div>
+            <div id="sp5">Color 5</div>
+            <div id="sp6">Color 6</div>
+            <div id="sp7">Color 7</div>
+            <div id="sp8">Color 8</div>
+            <div id="sp9">Color 9</div>
+            <div id="sp10">Color 10</div>
+            <div id="sp11">Color 11</div>
+            <div id="sp12">Color 12</div>
+            <div id="sp13">Color 13</div>
+            <div id="sp14">Color 14</div>
+            <div id="sp15">Color 15</div>
+            <div id="sp16">Color 16</div>
+            <div id="sp17">Color 17</div>
+            <div id="sp18">Color 18</div>
+            <div id="sp19">Color 19</div>
+            <div id="sp20">Color 20</div>
+            <div id="sp21">Color 21</div>
+            <div id="sp22">Color 22</div>
+            <div id="sp23">Color 23</div>
+            <div id="sp24">Color 24</div>
+            <div id="sp25">Color 25</div>
+            <div id="sp26">Color 26</div>
+            <div id="sp27">Color 27</div>
+            <div id="sp28">Color 28</div>
+            <div id="sp29">Color 29</div>
+            <div id="sp30">Color 30</div>
+            <div id="sp31">Color 31</div>
+            <div id="sp32">Color 32</div>
+            <div id="sp33">Color 33</div>
+            <div id="sp34">Color 34</div>
+            <div id="sp35">Color 35</div>
+            <div id="sp36">Color 36</div>
+            <div id="sp37">Color 37</div>
+            <div id="sp38">Color 38</div>
+            <div id="sp39">Color 39</div>
+            <div id="sp40">Color 40</div>
+          </div>
+          <div class="season-info">
+            Esta primavera es la más brillante y saturada de las cuatro. No
+            encontraremos en su paleta colores apagados o neutros. Los colores
+            que mejor le van son los cálidos saturados, aunque pueden llevar muy
+            bien algunos fríos brillantes. Lo mejor es evitar los colores
+            terrosos o demasiado pálidos, ya que le darán una apariencia muy
+            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
+            serán los que llamen la atención por su brillo, mientras que su piel
+            será dorada o bronce y su cabello con luminosidad.
+          </div>
+        </div>
       </section>
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
