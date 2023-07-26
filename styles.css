@@ -7,7 +7,7 @@
 
 @media (max-width: 199px) {
   #image {
-    left: 22%;
+    left: 5%;
   }
   #color-1 {
     width: 60%;
@@ -16,7 +16,78 @@
     width: 60%;
   }
 }
-@media (min-width: 200px) and (max-width: 299px) {
+@media (min-width: 200px) and (max-width: 249px) {
+  #image {
+    left: 6%;
+  }
+  #color-1 {
+    width: 60%;
+  }
+  #color-2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 250px) and (max-width: 299px) {
+  #image {
+    left: 10%;
+  }
+  #color-1 {
+    width: 60%;
+  }
+  #color-2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 300px) and (max-width: 349px) {
+  #image {
+    left: 12%;
+  }
+  #color-1 {
+    width: 60%;
+  }
+  #color-2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 350px) and (max-width: 399px) {
+  #image {
+    left: 15%;
+  }
+  #color-1 {
+    width: 60%;
+  }
+  #color-2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+@media (min-width: 400px) and (max-width: 449px) {
+  #image {
+    left: 20%;
+  }
+  #color-1 {
+    width: 60%;
+  }
+  #color-2 {
+    width: 60%;
+  }
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 499px) {
   #image {
     left: 24%;
   }
@@ -26,21 +97,12 @@
   #color-2 {
     width: 60%;
   }
-}
-
-@media (min-width: 300px) and (max-width: 399px) {
-  #image {
-    left: 26%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
+  h1 {
+    font-size: 2em;
   }
 }
 
-@media (min-width: 400px) and (max-width: 499px) {
+@media (min-width: 500px) and (max-width: 599px) {
   #image {
     left: 28%;
   }
@@ -50,17 +112,8 @@
   #color-2 {
     width: 60%;
   }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-  #image {
-    left: 30%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
+  h1 {
+    font-size: 2.5em;
   }
 }
 
@@ -74,6 +127,9 @@
   #color-2 {
     width: 60%;
   }
+  h1 {
+    font-size: 2.5em;
+  }
 }
 
 @media (min-width: 700px) and (max-width: 799px) {
@@ -85,6 +141,9 @@
   }
   #color-2 {
     width: 50%;
+  }
+  h1 {
+    font-size: 3.5em;
   }
 }
 
@@ -98,6 +157,9 @@
   #color-2 {
     width: 50%;
   }
+  h1 {
+    font-size: 3.5em;
+  }
 }
 
 @media (min-width: 900px) and (max-width: 999px) {
@@ -109,6 +171,9 @@
   }
   #color-2 {
     width: 40%;
+  }
+  h1 {
+    font-size: 4.5em;
   }
 }
 
@@ -122,6 +187,9 @@
   #color-2 {
     width: 40%;
   }
+  h1 {
+    font-size: 4.5em;
+  }
 }
 
 @media (min-width: 1100px) and (max-width: 1199px) {
@@ -133,6 +201,9 @@
   }
   #color-2 {
     width: 40%;
+  }
+  h1 {
+    font-size: 4.5em;
   }
 }
 
@@ -146,6 +217,9 @@
   #color-2 {
     width: 30%;
   }
+  h1 {
+    font-size: 4.5em;
+  }
 }
 @media (min-width: 1300px) and (max-width: 1399px) {
   #image {
@@ -156,6 +230,9 @@
   }
   #color-2 {
     width: 25%;
+  }
+  h1 {
+    font-size: 4.5em;
   }
 }
 
@@ -168,6 +245,9 @@
   }
   #color-2 {
     width: 25%;
+  }
+  h1 {
+    font-size: 4.5em;
   }
 }
 
@@ -188,7 +268,7 @@ h1 {
   /*height: 50vh;*/
   text-align: center;
   font-weight: 600;
-  font-size: 4.5em;
+  /*font-size: 4.5em;*/
   margin: 18vh 0 0 0;
 }
 
@@ -258,14 +338,10 @@ h1 {
 }
 
 #forms {
-  height: 20vh;
-  /*display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;*/
+  height: 15vh;
 }
 #summary {
-  height: 8vh;
+  height: 7vh;
   width: 90%;
   background-color: #aca4c1;
   display: flex;
@@ -298,10 +374,11 @@ h1 {
 
 #results {
   background-color: #7c709e;
-  height: 2vh;
+  height: 3vh;
   width: 90%;
   margin: auto;
   border-radius: 0.5%;
+  font-size: 1em;
 }
 
 #palette-selection,
@@ -310,6 +387,23 @@ h1 {
   height: 2vh;
   align-self: center;
   background-color: #aca4c1;
+}
+
+#charcateristics {
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#characteristics-button {
+  margin: auto;
+  background-color: #7c709e;
+  font-size: 1em;
+  padding: 0.2em;
+  border-radius: 3%;
+  text-decoration: none;
+  text-align: center;
+  visibility: hidden;
 }
 
 #seasons-info {

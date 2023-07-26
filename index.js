@@ -13,6 +13,7 @@ const toneSelection = document.getElementById("tone-selection");
 const seasonSelection = document.getElementById("season-selection");
 const finalSeasonSelection = document.getElementById("final-season-selection");
 const stepInfo = document.getElementById("step-info");
+const characteristicButton = document.getElementById("characteristics-button");
 
 //Variables necesarias para la seleccion entre las 16 estaciones
 let question = 0;
@@ -209,119 +210,364 @@ nextButton.onclick = (event) => {
 
 //Función para las preguntas de 0 a 2, determina si eres paleta fría o cálida
 function displayQuestion0to2() {
-  console.log("pregunta", question);
+  if (!radioOption1.checked && !radioOption2.checked) {
+    console.log("ninguno seleccionado");
+    alert("Debes selecionar una opción para continuar");
+  } else {
+    console.log("pregunta", question);
 
-  if (radioOption1.checked && questions[question].counter_1 === "cold") {
-    counterColdPalette++;
-  } else if (radioOption1.checked && questions[question].counter_1 === "warm") {
-    counterWarmPalette++;
-  } else if (radioOption2.checked && questions[question].counter_2 === "cold") {
-    counterColdPalette++;
-  } else if (radioOption2.checked && questions[question].counter_2 === "warm") {
-    counterWarmPalette++;
-  }
+    if (radioOption1.checked && questions[question].counter_1 === "cold") {
+      counterColdPalette++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1 === "warm"
+    ) {
+      counterWarmPalette++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "cold"
+    ) {
+      counterColdPalette++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "warm"
+    ) {
+      counterWarmPalette++;
+    }
 
-  if (question === 2 && counterColdPalette > counterWarmPalette) {
-    console.log("Eres paleta fria!");
-    palette = "cold";
+    if (question === 2 && counterColdPalette > counterWarmPalette) {
+      console.log("Eres paleta fria!");
+      palette = "cold";
+      question++;
+      clearRadioButtons();
+
+      divColor1.style.setProperty(
+        "background-color",
+        questions[question].color_1_cold
+      );
+      divColor2.style.setProperty(
+        "background-color",
+        questions[question].color_2_cold
+      );
+
+      textColor1.textContent = questions[question].text_1;
+      textColor2.textContent = questions[question].text_2;
+
+      numberOfStep.textContent = "Paso: 2";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+      paletteSelection.textContent = "Paleta: Fría";
+
+      return;
+    } else if (question === 2 && counterColdPalette < counterWarmPalette) {
+      console.log("Eres paleta calida!");
+      palette = "warm";
+      question++;
+      clearRadioButtons();
+
+      divColor1.style.setProperty(
+        "background-color",
+        questions[question].color_1_warm
+      );
+      divColor2.style.setProperty(
+        "background-color",
+        questions[question].color_2_warm
+      );
+
+      textColor1.textContent = questions[question].text_1;
+      textColor2.textContent = questions[question].text_2;
+
+      numberOfStep.textContent = "Paso: 2";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+      paletteSelection.textContent = "Paleta: Cálida";
+
+      return;
+    }
     question++;
-    clearRadioButtons();
-
     divColor1.style.setProperty(
       "background-color",
-      questions[question].color_1_cold
+      questions[question].color_1
     );
     divColor2.style.setProperty(
       "background-color",
-      questions[question].color_2_cold
+      questions[question].color_2
     );
-
     textColor1.textContent = questions[question].text_1;
     textColor2.textContent = questions[question].text_2;
 
-    numberOfStep.textContent = "Paso: 2";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
     numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-    paletteSelection.textContent = "Paleta: Fría";
 
-    return;
-  } else if (question === 2 && counterColdPalette < counterWarmPalette) {
-    console.log("Eres paleta calida!");
-    palette = "warm";
-    question++;
     clearRadioButtons();
-
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_warm
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_warm
-    );
-
-    textColor1.textContent = questions[question].text_1;
-    textColor2.textContent = questions[question].text_2;
-
-    numberOfStep.textContent = "Paso: 2";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-    paletteSelection.textContent = "Paleta: Cálida";
-
-    return;
   }
-  question++;
-  divColor1.style.setProperty("background-color", questions[question].color_1);
-  divColor2.style.setProperty("background-color", questions[question].color_2);
-  textColor1.textContent = questions[question].text_1;
-  textColor2.textContent = questions[question].text_2;
-
-  numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-  clearRadioButtons();
 }
 
 //Función para las preguntas de 3 a 5, determina si eres tono claro u oscuro, y con la combinación paleta y tono se determina una de las cuatro estaciones (primavera, verano, otoño, invierno)
 function displayQuestion3to5() {
-  console.log("pregunta", question);
-  if (radioOption1.checked && questions[question].counter_1 === "light") {
-    counterLightTone++;
-  } else if (radioOption1.checked && questions[question].counter_1 === "dark") {
-    counterDarkTone++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2 === "light"
-  ) {
-    counterLightTone++;
-  } else if (radioOption2.checked && questions[question].counter_2 === "dark") {
-    counterDarkTone++;
-  }
+  if (!radioOption1.checked && !radioOption2.checked) {
+    console.log("ninguno seleccionado");
+    alert("Debes selecionar una opción para continuar");
+  } else {
+    console.log("pregunta", question);
+    if (radioOption1.checked && questions[question].counter_1 === "light") {
+      counterLightTone++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1 === "dark"
+    ) {
+      counterDarkTone++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "light"
+    ) {
+      counterLightTone++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "dark"
+    ) {
+      counterDarkTone++;
+    }
 
-  if (question === 5 && counterLightTone > counterDarkTone) {
-    console.log("Eres tono claro!");
-    tone = "light";
+    if (question === 5 && counterLightTone > counterDarkTone) {
+      console.log("Eres tono claro!");
+      tone = "light";
+      question++;
+      clearRadioButtons();
+
+      if (palette === "cold") {
+        console.log("Eres tono claro y estación verano");
+        seasonSelection.textContent = "Estación: Verano";
+        season = "summer";
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_summer
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_summer
+        );
+      } else if (palette === "warm") {
+        console.log("Eres tono claro y estación primavera");
+
+        seasonSelection.textContent = "Estación: Primavera";
+        season = "spring";
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_spring
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_spring
+        );
+      }
+      textColor1.textContent = questions[question].text_1;
+      textColor2.textContent = questions[question].text_2;
+
+      numberOfStep.textContent = "Paso: 3";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+      toneSelection.textContent = "Tono: Claro";
+
+      return;
+    } else if (question === 5 && counterLightTone < counterDarkTone) {
+      console.log("Eres tono oscuro!");
+      tone = "dark";
+      question++;
+      clearRadioButtons();
+
+      if (palette === "cold") {
+        console.log("eres invierno");
+
+        seasonSelection.textContent = "Estación: Invierno";
+        season = "winter";
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_winter
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_winter
+        );
+      } else if (palette === "warm") {
+        console.log("eres otoño");
+        seasonSelection.textContent = "Estación: Otoño";
+        season = "autumn";
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_autumn
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_autumn
+        );
+      }
+
+      textColor1.textContent = questions[question].text_1;
+      textColor2.textContent = questions[question].text_2;
+      toneSelection.textContent = "Tono: Oscuro";
+
+      numberOfStep.textContent = "Paso: 3";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+
+      return;
+    }
     question++;
-    clearRadioButtons();
-
     if (palette === "cold") {
-      console.log("Eres tono claro y estación verano");
-      seasonSelection.textContent = "Estación: Verano";
-      season = "summer";
       divColor1.style.setProperty(
         "background-color",
-        questions[question].color_1_summer
+        questions[question].color_1_cold
       );
       divColor2.style.setProperty(
         "background-color",
-        questions[question].color_2_summer
+        questions[question].color_2_cold
       );
     } else if (palette === "warm") {
-      console.log("Eres tono claro y estación primavera");
+      divColor1.style.setProperty(
+        "background-color",
+        questions[question].color_1_warm
+      );
+      divColor2.style.setProperty(
+        "background-color",
+        questions[question].color_2_warm
+      );
+    }
+    textColor1.textContent = questions[question].text_1;
+    textColor2.textContent = questions[question].text_2;
 
-      seasonSelection.textContent = "Estación: Primavera";
-      season = "spring";
+    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+
+    clearRadioButtons();
+  }
+}
+
+//Función para las preguntas de 6 a 8, con la estación seleccionada, se determina si la persona esta mas cerca del tono puro o el tono oscuro.
+function displayQuestion6to8() {
+  if (!radioOption1.checked && !radioOption2.checked) {
+    console.log("ninguno seleccionado");
+    alert("Debes selecionar una opción para continuar");
+  } else {
+    console.log("pregunta", question);
+    if (
+      radioOption1.checked &&
+      questions[question].counter_1 === "pure season"
+    ) {
+      counterClosenessPure++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1 === "dark season"
+    ) {
+      counterClosenessDark++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "pure season"
+    ) {
+      counterClosenessPure++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2 === "dark season"
+    ) {
+      counterClosenessDark++;
+    }
+
+    if (question === 8 && counterClosenessPure > counterClosenessDark) {
+      console.log("Estas mas cerca del tono puro!");
+      closest = "pure";
+      question++;
+
+      clearRadioButtons();
+
+      if (season === "spring") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_spring[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_spring[0]
+        );
+      } else if (season === "summer") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_summer[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_summer[0]
+        );
+      } else if (season === "autumn") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_autumn[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_autumn[0]
+        );
+      }
+
+      textColor1.textContent = questions[question].text_1[0];
+      textColor2.textContent = questions[question].text_2[0];
+
+      numberOfStep.textContent = "Paso: 4";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+
+      return;
+    } else if (question === 8 && counterLightTone < counterDarkTone) {
+      console.log("Estas mas cerca del tono oscuro!");
+      closest = "dark";
+      question++;
+
+      clearRadioButtons();
+
+      if (season === "spring") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_spring[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_spring[1]
+        );
+      } else if (season === "summer") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_summer[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_summer[1]
+        );
+      } else if (season === "autumn") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_autumn[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_autumn[1]
+        );
+      }
+
+      textColor1.textContent = questions[question].text_1[1];
+      textColor2.textContent = questions[question].text_2[1];
+
+      numberOfStep.textContent = "Paso: 4";
+      stepInfo.textContent =
+        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+
+      return;
+    }
+
+    question++;
+    if (season === "spring") {
       divColor1.style.setProperty(
         "background-color",
         questions[question].color_1_spring
@@ -330,40 +576,16 @@ function displayQuestion3to5() {
         "background-color",
         questions[question].color_2_spring
       );
-    }
-    textColor1.textContent = questions[question].text_1;
-    textColor2.textContent = questions[question].text_2;
-
-    numberOfStep.textContent = "Paso: 3";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-    toneSelection.textContent = "Tono: Claro";
-
-    return;
-  } else if (question === 5 && counterLightTone < counterDarkTone) {
-    console.log("Eres tono oscuro!");
-    tone = "dark";
-    question++;
-    clearRadioButtons();
-
-    if (palette === "cold") {
-      console.log("eres invierno");
-
-      seasonSelection.textContent = "Estación: Invierno";
-      season = "winter";
+    } else if (season === "summer") {
       divColor1.style.setProperty(
         "background-color",
-        questions[question].color_1_winter
+        questions[question].color_1_summer
       );
       divColor2.style.setProperty(
         "background-color",
-        questions[question].color_2_winter
+        questions[question].color_2_summer
       );
-    } else if (palette === "warm") {
-      console.log("eres otoño");
-      seasonSelection.textContent = "Estación: Otoño";
-      season = "autumn";
+    } else if (season === "autumn") {
       divColor1.style.setProperty(
         "background-color",
         questions[question].color_1_autumn
@@ -372,428 +594,283 @@ function displayQuestion3to5() {
         "background-color",
         questions[question].color_2_autumn
       );
+    } else if (season === "winter") {
+      divColor1.style.setProperty(
+        "background-color",
+        questions[question].color_1_winter
+      );
+      divColor2.style.setProperty(
+        "background-color",
+        questions[question].color_2_winter
+      );
     }
-
     textColor1.textContent = questions[question].text_1;
     textColor2.textContent = questions[question].text_2;
-    toneSelection.textContent = "Tono: Oscuro";
 
-    numberOfStep.textContent = "Paso: 3";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
     numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-    return;
-  }
-  question++;
-  if (palette === "cold") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_cold
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_cold
-    );
-  } else if (palette === "warm") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_warm
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_warm
-    );
-  }
-  textColor1.textContent = questions[question].text_1;
-  textColor2.textContent = questions[question].text_2;
-
-  numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-  clearRadioButtons();
-}
-
-//Función para las preguntas de 6 a 8, con la estación seleccionada, se determina si la persona esta mas cerca del tono puro o el tono oscuro.
-function displayQuestion6to8() {
-  console.log("pregunta", question);
-  if (radioOption1.checked && questions[question].counter_1 === "pure season") {
-    counterClosenessPure++;
-  } else if (
-    radioOption1.checked &&
-    questions[question].counter_1 === "dark season"
-  ) {
-    counterClosenessDark++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2 === "pure season"
-  ) {
-    counterClosenessPure++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2 === "dark season"
-  ) {
-    counterClosenessDark++;
-  }
-
-  if (question === 8 && counterClosenessPure > counterClosenessDark) {
-    console.log("Estas mas cerca del tono puro!");
-    closest = "pure";
-    question++;
 
     clearRadioButtons();
-
-    if (season === "spring") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_spring[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_spring[0]
-      );
-    } else if (season === "summer") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_summer[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_summer[0]
-      );
-    } else if (season === "autumn") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_autumn[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_autumn[0]
-      );
-    }
-
-    textColor1.textContent = questions[question].text_1[0];
-    textColor2.textContent = questions[question].text_2[0];
-
-    numberOfStep.textContent = "Paso: 4";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-    return;
-  } else if (question === 8 && counterLightTone < counterDarkTone) {
-    console.log("Estas mas cerca del tono oscuro!");
-    closest = "dark";
-    question++;
-
-    clearRadioButtons();
-
-    if (season === "spring") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_spring[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_spring[1]
-      );
-    } else if (season === "summer") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_summer[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_summer[1]
-      );
-    } else if (season === "autumn") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_autumn[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_autumn[1]
-      );
-    }
-
-    textColor1.textContent = questions[question].text_1[1];
-    textColor2.textContent = questions[question].text_2[1];
-
-    numberOfStep.textContent = "Paso: 4";
-    stepInfo.textContent =
-      "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-    return;
   }
-
-  question++;
-  if (season === "spring") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_spring
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_spring
-    );
-  } else if (season === "summer") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_summer
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_summer
-    );
-  } else if (season === "autumn") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_autumn
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_autumn
-    );
-  } else if (season === "winter") {
-    divColor1.style.setProperty(
-      "background-color",
-      questions[question].color_1_winter
-    );
-    divColor2.style.setProperty(
-      "background-color",
-      questions[question].color_2_winter
-    );
-  }
-  textColor1.textContent = questions[question].text_1;
-  textColor2.textContent = questions[question].text_2;
-
-  numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-
-  clearRadioButtons();
 }
 
 //Función para las preguntas de 9 a 11, con la estación seleccionada, y determinado si se acerca más al puro o al oscuro, se compara puro/claro o neutro/oscuro. y finalmente se determina la variante correspondiente entre las 16 estaciones
 function displayQuestion9to11() {
-  console.log("pregunta", question);
-  if (
-    radioOption1.checked &&
-    questions[question].counter_1[0] === "pure season"
-  ) {
-    counterPure++;
-  } else if (
-    radioOption1.checked &&
-    questions[question].counter_1[0] === "tint season"
-  ) {
-    counterTint++;
-  } else if (
-    radioOption1.checked &&
-    questions[question].counter_1[1] === "tone season"
-  ) {
-    counterTone++;
-  } else if (
-    radioOption1.checked &&
-    questions[question].counter_1[1] === "shade season"
-  ) {
-    counterShade++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2[0] === "pure season"
-  ) {
-    counterPure++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2[0] === "tint season"
-  ) {
-    counterTint++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2[1] === "tone season"
-  ) {
-    counterTone++;
-  } else if (
-    radioOption2.checked &&
-    questions[question].counter_2[1] === "shade season"
-  ) {
-    counterShade++;
+  if (!radioOption1.checked && !radioOption2.checked) {
+    console.log("ninguno seleccionado");
+    alert("Debes selecionar una opción para continuar");
+  } else {
+    console.log("pregunta", question);
+    if (
+      radioOption1.checked &&
+      questions[question].counter_1[0] === "pure season"
+    ) {
+      counterPure++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1[0] === "tint season"
+    ) {
+      counterTint++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1[1] === "tone season"
+    ) {
+      counterTone++;
+    } else if (
+      radioOption1.checked &&
+      questions[question].counter_1[1] === "shade season"
+    ) {
+      counterShade++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2[0] === "pure season"
+    ) {
+      counterPure++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2[0] === "tint season"
+    ) {
+      counterTint++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2[1] === "tone season"
+    ) {
+      counterTone++;
+    } else if (
+      radioOption2.checked &&
+      questions[question].counter_2[1] === "shade season"
+    ) {
+      counterShade++;
+    }
+
+    if (question === 11 && closest === "pure" && counterPure > counterTint) {
+      console.log("Eres tono Puro");
+
+      if (season === "spring") {
+        console.log("Eres Primavera Puro");
+        seasonTone = "springPure";
+        finalSeasonSelection.textContent = "Subestación: Primavera Pura";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#spring-pure");
+      } else if (season === "summer") {
+        console.log("Eres Verano Puro");
+        seasonTone = "summerPure";
+        finalSeasonSelection.textContent = "Subestación: Verano Puro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#summer-pure");
+      } else if (season === "autumn") {
+        console.log("Eres Otoño Puro");
+        seasonTone = "autumnPure";
+        finalSeasonSelection.textContent = "Subestación: Otoño Puro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#autumn-pure");
+      } else if (season === "winter") {
+        console.log("Eres Invierno Puro");
+        seasonTone = "winterPure";
+        finalSeasonSelection.textContent = "Subestación: Invierno Puro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#winter-pure");
+      }
+    } else if (
+      question === 11 &&
+      closest === "pure" &&
+      counterPure < counterTint
+    ) {
+      console.log("Eres tono Claro");
+      if (season === "spring") {
+        console.log("Eres Primavera Claro");
+        seasonTone = "springTint";
+        finalSeasonSelection.textContent = "Subestación: Primavera Clara";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#spring-tint");
+      } else if (season === "summer") {
+        console.log("Eres Verano Claro");
+        seasonTone = "summerTint";
+        finalSeasonSelection.textContent = "Subestación: Verano Claro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#summer-tint");
+      } else if (season === "autumn") {
+        console.log("Eres Otoño Claro");
+        seasonTone = "autumnTint";
+        finalSeasonSelection.textContent = "Subestación: Otoño Claro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#autumn-tint");
+      } else if (season === "winter") {
+        console.log("Eres Invierno Claro");
+        seasonTone = "winterTint";
+        finalSeasonSelection.textContent = "Subestación: Invierno Claro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#winter-tint");
+      }
+    } else if (
+      question === 11 &&
+      closest === "dark" &&
+      counterTone > counterShade
+    ) {
+      console.log("Eres tono Neutro");
+      if (season === "spring") {
+        console.log("Eres Primavera Neutro");
+        seasonTone = "springTone";
+        finalSeasonSelection.textContent = "Subestación: Primavera Neutra";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#spring-tone");
+      } else if (season === "summer") {
+        console.log("Eres Verano Neutro");
+        seasonTone = "summerTone";
+        finalSeasonSelection.textContent = "Subestación: Verano Neutro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#summer-tone");
+      } else if (season === "autumn") {
+        console.log("Eres Otoño Neutro");
+        seasonTone = "autumnTone";
+        finalSeasonSelection.textContent = "Subestación: Otoño Neutro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#autumn-tone");
+      } else if (season === "winter") {
+        console.log("Eres Invierno Neutro");
+        seasonTone = "winterTone";
+        finalSeasonSelection.textContent = "Subestación: Invierno Neutro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#winter-tone");
+      }
+    } else if (
+      question === 11 &&
+      closest === "dark" &&
+      counterTone < counterShade
+    ) {
+      console.log("Eres tono Oscuro");
+      if (season === "spring") {
+        console.log("Eres Primavera Oscuro");
+        seasonTone = "springShade";
+        finalSeasonSelection.textContent = "Subestación: Primavera Oscura";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#spring-shade");
+      } else if (season === "summer") {
+        console.log("Eres Verano Oscuro");
+        seasonTone = "summerShade";
+        finalSeasonSelection.textContent = "Subestación: Verano Oscuro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#summer-shade");
+      } else if (season === "autumn") {
+        console.log("Eres Otoño Oscuro");
+        seasonTone = "autumnShade";
+        finalSeasonSelection.textContent = "Subestación: Otoño Oscuro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#autumn-shade");
+      } else if (season === "winter") {
+        console.log("Eres Invierno Oscuro");
+        seasonTone = "winterShade";
+        finalSeasonSelection.textContent = "Subestación: Invierno Oscuro";
+        characteristicButton.style.visibility = "visible";
+        characteristicButton.setAttribute("href", "#winter-shade");
+      }
+    }
+    question++;
+
+    if (closest === "pure") {
+      if (season === "spring") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_spring[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_spring[0]
+        );
+      } else if (season === "summer") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_summer[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_summer[0]
+        );
+      } else if (season === "autumn") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_autumn[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_autumn[0]
+        );
+      } else if (season === "winter") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_winter[0]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_winter[0]
+        );
+      }
+      textColor1.textContent = questions[question].text_1[0];
+      textColor2.textContent = questions[question].text_2[0];
+
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+    } else if (closest === "dark") {
+      if (season === "spring") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_spring[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_spring[1]
+        );
+      } else if (season === "summer") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_summer[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_summer[1]
+        );
+      } else if (season === "autumn") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_autumn[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_autumn[1]
+        );
+      } else if (season === "winter") {
+        divColor1.style.setProperty(
+          "background-color",
+          questions[question].color_1_winter[1]
+        );
+        divColor2.style.setProperty(
+          "background-color",
+          questions[question].color_2_winter[1]
+        );
+      }
+      textColor1.textContent = questions[question].text_1[1];
+      textColor2.textContent = questions[question].text_2[1];
+      numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+    }
+
+    clearRadioButtons();
   }
-
-  if (question === 11 && closest === "pure" && counterPure > counterTint) {
-    console.log("Eres tono Puro");
-
-    if (season === "spring") {
-      console.log("Eres Primavera Puro");
-      seasonTone = "springPure";
-      finalSeasonSelection.textContent = "Subestación: Primavera Pura";
-    } else if (season === "summer") {
-      console.log("Eres Verano Puro");
-      seasonTone = "summerPure";
-      finalSeasonSelection.textContent = "Subestación: Verano Puro";
-    } else if (season === "autumn") {
-      console.log("Eres Otoño Puro");
-      seasonTone = "autumnPure";
-      finalSeasonSelection.textContent = "Subestación: Otoño Puro";
-    } else if (season === "winter") {
-      console.log("Eres Invierno Puro");
-      seasonTone = "winterPure";
-      finalSeasonSelection.textContent = "Subestación: Invierno Puro";
-    }
-  } else if (
-    question === 11 &&
-    closest === "pure" &&
-    counterPure < counterTint
-  ) {
-    console.log("Eres tono Claro");
-    if (season === "spring") {
-      console.log("Eres Primavera Claro");
-      seasonTone = "springTint";
-      finalSeasonSelection.textContent = "Subestación: Primavera Clara";
-    } else if (season === "summer") {
-      console.log("Eres Verano Claro");
-      seasonTone = "summerTint";
-      finalSeasonSelection.textContent = "Subestación: Verano Claro";
-    } else if (season === "autumn") {
-      console.log("Eres Otoño Claro");
-      seasonTone = "autumnTint";
-      finalSeasonSelection.textContent = "Subestación: Otoño Claro";
-    } else if (season === "winter") {
-      console.log("Eres Invierno Claro");
-      seasonTone = "winterTint";
-      finalSeasonSelection.textContent = "Subestación: Invierno Claro";
-    }
-  } else if (
-    question === 11 &&
-    closest === "dark" &&
-    counterTone > counterShade
-  ) {
-    console.log("Eres tono Neutro");
-    if (season === "spring") {
-      console.log("Eres Primavera Neutro");
-      seasonTone = "springTone";
-      finalSeasonSelection.textContent = "Subestación: Primavera Neutra";
-    } else if (season === "summer") {
-      console.log("Eres Verano Neutro");
-      seasonTone = "summerTone";
-      finalSeasonSelection.textContent = "Subestación: Verano Neutro";
-    } else if (season === "autumn") {
-      console.log("Eres Otoño Neutro");
-      seasonTone = "autumnTone";
-      finalSeasonSelection.textContent = "Subestación: Otoño Neutro";
-    } else if (season === "winter") {
-      console.log("Eres Invierno Neutro");
-      seasonTone = "winterTone";
-      finalSeasonSelection.textContent = "Subestación: Invierno Neutro";
-    }
-  } else if (
-    question === 11 &&
-    closest === "dark" &&
-    counterTone < counterShade
-  ) {
-    console.log("Eres tono Oscuro");
-    if (season === "spring") {
-      console.log("Eres Primavera Oscuro");
-      seasonTone = "springShade";
-      finalSeasonSelection.textContent = "Subestación: Primavera Oscura";
-    } else if (season === "summer") {
-      console.log("Eres Verano Oscuro");
-      seasonTone = "summerShade";
-      finalSeasonSelection.textContent = "Subestación: Verano Oscuro";
-    } else if (season === "autumn") {
-      console.log("Eres Otoño Oscuro");
-      seasonTone = "autumnShade";
-      finalSeasonSelection.textContent = "Subestación: Otoño Oscuro";
-    } else if (season === "winter") {
-      console.log("Eres Invierno Oscuro");
-      seasonTone = "winterShade";
-      finalSeasonSelection.textContent = "Subestación: Invierno Oscuro";
-    }
-  }
-  question++;
-
-  if (closest === "pure") {
-    if (season === "spring") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_spring[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_spring[0]
-      );
-    } else if (season === "summer") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_summer[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_summer[0]
-      );
-    } else if (season === "autumn") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_autumn[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_autumn[0]
-      );
-    } else if (season === "winter") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_winter[0]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_winter[0]
-      );
-    }
-    textColor1.textContent = questions[question].text_1[0];
-    textColor2.textContent = questions[question].text_2[0];
-
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-  } else if (closest === "dark") {
-    if (season === "spring") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_spring[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_spring[1]
-      );
-    } else if (season === "summer") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_summer[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_summer[1]
-      );
-    } else if (season === "autumn") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_autumn[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_autumn[1]
-      );
-    } else if (season === "winter") {
-      divColor1.style.setProperty(
-        "background-color",
-        questions[question].color_1_winter[1]
-      );
-      divColor2.style.setProperty(
-        "background-color",
-        questions[question].color_2_winter[1]
-      );
-    }
-    textColor1.textContent = questions[question].text_1[1];
-    textColor2.textContent = questions[question].text_2[1];
-    numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
-  }
-
-  clearRadioButtons();
 }
