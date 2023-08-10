@@ -8,12 +8,16 @@ const radioOption1 = document.getElementById("radio-option-1");
 const radioOption2 = document.getElementById("radio-option-2");
 const numberOfStep = document.getElementById("step");
 const numberOfQuestion = document.getElementById("number-of-question");
+const answers = document.getElementById("answers");
 const paletteSelection = document.getElementById("palette-selection");
 const toneSelection = document.getElementById("tone-selection");
 const seasonSelection = document.getElementById("season-selection");
 const finalSeasonSelection = document.getElementById("final-season-selection");
 const stepInfo = document.getElementById("step-info");
 const characteristicButton = document.getElementById("characteristics-button");
+const input = document.getElementById("image_uploads");
+const uploadFormText = document.querySelector(".upload-text");
+const preview = document.querySelector(".preview");
 
 //Variables necesarias para la seleccion entre las 16 estaciones
 let question = 0;
@@ -207,6 +211,74 @@ nextButton.onclick = (event) => {
     displayQuestion9to11();
   }
 };
+
+//Funcion para subir foto
+input.addEventListener("change", updateImageDisplay);
+
+//Funcion para controlar si el tipo de archivo subido es valido
+const fileTypes = [
+  "image/apng",
+  "image/bmp",
+  "image/gif",
+  "image/jpeg",
+  "image/pjpeg",
+  "image/png",
+  "image/svg+xml",
+  "image/tiff",
+  "image/webp",
+  "image/x-icon",
+];
+
+function validFileType(file) {
+  return fileTypes.includes(file.type);
+}
+
+//Funcion para convertir el tamano de los archivos subidos
+function returnFileSize(number) {
+  if (number < 1024) {
+    return `${number} bytes`;
+  } else if (number >= 1024 && number < 1048576) {
+    return `${(number / 1024).toFixed(1)} KB`;
+  } else if (number >= 1048576) {
+    return `${(number / 1048576).toFixed(1)} MB`;
+  }
+}
+
+function updateImageDisplay() {
+  console.log("hubo un cambio");
+  while (preview.firstChild) {
+    preview.removeChild(preview.firstChild);
+  }
+
+  const curFiles = input.files;
+  if (curFiles.length === 0) {
+    const para = document.createElement("p");
+    para.textContent = "No files currently selected for upload";
+    preview.appendChild(para);
+  } else {
+    for (const file of curFiles) {
+      if (validFileType(file)) {
+        const image = document.createElement("img");
+        preview.appendChild(image);
+        image.src = URL.createObjectURL(file);
+        image.setAttribute("id", "image");
+        uploadFormText.setAttribute("hidden", "hidden");
+        input.setAttribute("hidden", "hidden");
+        divColor1.removeAttribute("hidden");
+        divColor2.removeAttribute("hidden");
+        answers.style.setProperty("visibility", "visible");
+        numberOfStep.textContent = "Paso: 1";
+        stepInfo.textContent =
+          "El primer paso es determinar la temperatura del color. Hay que determinar si somos de paleta fría o cálida. Es importante no elegir los colores según nuestra preferencia, sino prestar atención a cual resalta mejor nuestras carcterísticas.";
+        numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
+      } else {
+        const para = document.createElement("p");
+        para.textContent = `File name ${file.name}: Not a valid file type. Update your selection.`;
+        preview.appendChild(para);
+      }
+    }
+  }
+}
 
 //Función para las preguntas de 0 a 2, determina si eres paleta fría o cálida
 function displayQuestion0to2() {

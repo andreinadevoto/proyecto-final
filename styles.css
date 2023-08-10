@@ -6,8 +6,9 @@
 }
 
 @media (max-width: 199px) {
-  #image {
-    left: 5%;
+  .preview {
+    width: 90vw;
+    left: calc(50% - 45vw);
   }
   #color-1 {
     width: 60%;
@@ -16,23 +17,11 @@
     width: 60%;
   }
 }
-@media (min-width: 200px) and (max-width: 249px) {
-  #image {
-    left: 6%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
-  }
-  h1 {
-    font-size: 2em;
-  }
-}
-@media (min-width: 250px) and (max-width: 299px) {
-  #image {
-    left: 10%;
+
+@media (min-width: 200px) and (max-width: 299px) {
+  .preview {
+    width: 90vw;
+    left: calc(50% - 45vw);
   }
   #color-1 {
     width: 60%;
@@ -44,9 +33,10 @@
     font-size: 2em;
   }
 }
-@media (min-width: 300px) and (max-width: 349px) {
-  #image {
-    left: 12%;
+@media (min-width: 300px) and (max-width: 399px) {
+  .preview {
+    width: 80vw;
+    left: calc(50% - 40vw);
   }
   #color-1 {
     width: 60%;
@@ -58,23 +48,10 @@
     font-size: 2em;
   }
 }
-@media (min-width: 350px) and (max-width: 399px) {
-  #image {
-    left: 15%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
-  }
-  h1 {
-    font-size: 2em;
-  }
-}
-@media (min-width: 400px) and (max-width: 449px) {
-  #image {
-    left: 20%;
+@media (min-width: 400px) and (max-width: 499px) {
+  .preview {
+    width: 70vw;
+    left: calc(50% - 35vw);
   }
   #color-1 {
     width: 60%;
@@ -87,24 +64,10 @@
   }
 }
 
-@media (min-width: 450px) and (max-width: 499px) {
-  #image {
-    left: 24%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
-  }
-  h1 {
-    font-size: 2em;
-  }
-}
-
-@media (min-width: 500px) and (max-width: 599px) {
-  #image {
-    left: 28%;
+@media (min-width: 500px) and (max-width: 699px) {
+  .preview {
+    width: 50vw;
+    left: calc(50% - 25vw);
   }
   #color-1 {
     width: 60%;
@@ -117,39 +80,10 @@
   }
 }
 
-@media (min-width: 600px) and (max-width: 699px) {
-  #image {
-    left: 32%;
-  }
-  #color-1 {
-    width: 60%;
-  }
-  #color-2 {
-    width: 60%;
-  }
-  h1 {
-    font-size: 2.5em;
-  }
-}
-
-@media (min-width: 700px) and (max-width: 799px) {
-  #image {
-    left: 34%;
-  }
-  #color-1 {
-    width: 50%;
-  }
-  #color-2 {
-    width: 50%;
-  }
-  h1 {
-    font-size: 3.5em;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 899px) {
-  #image {
-    left: 35.5%;
+@media (min-width: 700px) and (max-width: 899px) {
+  .preview {
+    width: 40vw;
+    left: calc(50% - 20vw);
   }
   #color-1 {
     width: 50%;
@@ -163,8 +97,9 @@
 }
 
 @media (min-width: 900px) and (max-width: 999px) {
-  #image {
-    left: 37%;
+  .preview {
+    width: 36vw;
+    left: calc(50% - 18vw);
   }
   #color-1 {
     width: 40%;
@@ -176,10 +111,10 @@
     font-size: 4.5em;
   }
 }
-
 @media (min-width: 1000px) and (max-width: 1099px) {
-  #image {
-    left: 38%;
+  .preview {
+    width: 34vw;
+    left: calc(50% - 17vw);
   }
   #color-1 {
     width: 40%;
@@ -191,10 +126,10 @@
     font-size: 4.5em;
   }
 }
-
 @media (min-width: 1100px) and (max-width: 1199px) {
-  #image {
-    left: 39%;
+  .preview {
+    width: 30vw;
+    left: calc(50% - 15vw);
   }
   #color-1 {
     width: 40%;
@@ -208,8 +143,9 @@
 }
 
 @media (min-width: 1200px) and (max-width: 1299px) {
-  #image {
-    left: 40%;
+  .preview {
+    width: 28vw;
+    left: calc(50% - 14vw);
   }
   #color-1 {
     width: 30%;
@@ -221,24 +157,10 @@
     font-size: 4.5em;
   }
 }
-@media (min-width: 1300px) and (max-width: 1399px) {
-  #image {
-    left: 41%;
-  }
-  #color-1 {
-    width: 25%;
-  }
-  #color-2 {
-    width: 25%;
-  }
-  h1 {
-    font-size: 4.5em;
-  }
-}
-
-@media (min-width: 1400px) {
-  #image {
-    left: 42%;
+@media (min-width: 1300px) {
+  .preview {
+    width: 25vw;
+    left: calc(50% - 12.5vw);
   }
   #color-1 {
     width: 25%;
@@ -265,10 +187,8 @@ main {
 }
 
 h1 {
-  /*height: 50vh;*/
   text-align: center;
   font-weight: 600;
-  /*font-size: 4.5em;*/
   margin: 18vh 0 0 0;
 }
 
@@ -278,12 +198,17 @@ h1 {
   font-style: italic;
 }
 #link-header {
-  /*height: 25vh;*/
   background-color: #7c709e;
   font-size: 1.5em;
   padding: 0.5em;
   border-radius: 5%;
   text-decoration: none;
+}
+
+#upload-instructions {
+  font-size: 1.2em;
+  margin: 4vh 2vh;
+  font-style: italic;
 }
 
 #intro {
@@ -303,6 +228,7 @@ h1 {
 }
 
 #answers {
+  visibility: hidden;
   text-align: center;
   height: 30vh;
 }
@@ -318,26 +244,33 @@ h1 {
 
 #color-1 {
   height: 50vh;
-
   background-color: rgba(210, 210, 210, 255);
 }
 
 #color-2 {
   height: 50vh;
-
   background-color: rgba(247, 222, 118, 255);
 }
 
-#image {
+#image-container {
   height: 50vh;
-  position: absolute;
-  top: 0;
-  /*left: 42%;*/
   text-align: center;
   background-color: transparent;
 }
 
-#forms {
+#image {
+  max-height: 50vh;
+  width: inherit;
+  object-fit: cover;
+  background-color: transparent;
+}
+
+.preview {
+  position: absolute;
+  background-color: transparent;
+}
+
+.test #forms {
   height: 15vh;
 }
 #summary {
@@ -439,49 +372,12 @@ h1 {
   margin: auto;
 }
 
-#sp1,
-#sp2,
-#sp3,
-#sp4,
-#sp5,
-#sp6,
-#sp7,
-#sp8,
-#sp9,
-#sp10,
-#sp11,
-#sp12,
-#sp13,
-#sp14,
-#sp15,
-#sp16,
-#sp17,
-#sp18,
-#sp19,
-#sp20,
-#sp21,
-#sp22,
-#sp23,
-#sp24,
-#sp25,
-#sp26,
-#sp27,
-#sp28,
-#sp29,
-#sp30,
-#sp31,
-#sp32,
-#sp33,
-#sp34,
-#sp35,
-#sp36,
-#sp37,
-#sp38,
-#sp39,
-#sp40 {
+.color-box {
   height: 15vh;
   width: 10%;
 }
+
+/*----------------------------------------------------------Spring--------------------------------------------------- */
 
 #sp1 {
   background-color: rgba(241, 241, 217, 255);
@@ -602,4 +498,1825 @@ h1 {
 }
 #sp40 {
   background-color: rgba(191, 191, 191, 255);
+}
+
+#stint1 {
+  background-color: rgba(255, 240, 217, 255);
+}
+#stint2 {
+  background-color: rgba(248, 227, 196, 255);
+}
+#stint3 {
+  background-color: rgba(239, 225, 199, 255);
+}
+#stint4 {
+  background-color: rgba(186, 173, 154, 255);
+}
+#stint5 {
+  background-color: rgba(216, 217, 219, 255);
+}
+#stint6 {
+  background-color: rgba(231, 222, 207, 255);
+}
+#stint7 {
+  background-color: rgba(231, 211, 174, 255);
+}
+#stint8 {
+  background-color: rgba(151, 138, 119, 255);
+}
+#stint9 {
+  background-color: rgba(248, 186, 207, 255);
+}
+#stint10 {
+  background-color: rgba(241, 114, 157, 255);
+}
+#stint11 {
+  background-color: rgba(239, 88, 149, 255);
+}
+#stint12 {
+  background-color: rgba(229, 43, 104, 255);
+}
+#stint13 {
+  background-color: rgba(252, 206, 170, 255);
+}
+#stint14 {
+  background-color: rgba(245, 138, 112, 255);
+}
+#stint15 {
+  background-color: rgba(242, 108, 63, 255);
+}
+#stint16 {
+  background-color: rgba(219, 91, 64, 255);
+}
+#stint17 {
+  background-color: rgba(255, 247, 154, 255);
+}
+#stint18 {
+  background-color: rgba(255, 223, 122, 255);
+}
+#stint19 {
+  background-color: rgba(255, 208, 126, 255);
+}
+#stint20 {
+  background-color: rgba(248, 160, 96, 255);
+}
+#stint21 {
+  background-color: rgba(255, 230, 151, 255);
+}
+#stint22 {
+  background-color: rgba(180, 216, 142, 255);
+}
+#stint23 {
+  background-color: rgba(142, 122, 87, 255);
+}
+#stint24 {
+  background-color: rgba(123, 106, 76, 255);
+}
+#stint25 {
+  background-color: rgba(208, 228, 167, 255);
+}
+#stint26 {
+  background-color: rgba(126, 193, 77, 255);
+}
+#stint27 {
+  background-color: rgba(93, 186, 80, 255);
+}
+#stint28 {
+  background-color: rgba(132, 133, 93, 255);
+}
+#stint29 {
+  background-color: rgba(141, 212, 222, 255);
+}
+#stint30 {
+  background-color: rgba(0, 144, 171, 255);
+}
+#stint31 {
+  background-color: rgba(0, 150, 147, 255);
+}
+#stint32 {
+  background-color: rgba(9, 81, 130, 255);
+}
+#stint33 {
+  background-color: rgba(199, 203, 230, 255);
+}
+#stint34 {
+  background-color: rgba(174, 173, 215, 255);
+}
+#stint35 {
+  background-color: rgba(150, 153, 204, 255);
+}
+#stint36 {
+  background-color: rgba(98, 75, 157, 255);
+}
+#stint37 {
+  background-color: rgba(153, 163, 172, 255);
+}
+#stint38 {
+  background-color: rgba(131, 76, 69, 255);
+}
+#stint39 {
+  background-color: rgba(212, 154, 104, 255);
+}
+#stint40 {
+  background-color: rgba(191, 191, 191, 255);
+}
+
+#stone1 {
+  background-color: rgba(249, 236, 181, 255);
+}
+#stone2 {
+  background-color: rgba(249, 229, 166, 255);
+}
+#stone3 {
+  background-color: rgba(249, 224, 157, 255);
+}
+#stone4 {
+  background-color: rgba(183, 176, 168, 255);
+}
+#stone5 {
+  background-color: rgba(249, 197, 207, 255);
+}
+#stone6 {
+  background-color: rgba(247, 181, 165, 255);
+}
+#stone7 {
+  background-color: rgba(245, 146, 115, 255);
+}
+#stone8 {
+  background-color: rgba(229, 136, 105, 255);
+}
+#stone9 {
+  background-color: rgba(254, 213, 165, 255);
+}
+#stone10 {
+  background-color: rgba(254, 206, 122, 255);
+}
+#stone11 {
+  background-color: rgba(251, 187, 123, 255);
+}
+#stone12 {
+  background-color: rgba(182, 91, 73, 255);
+}
+#stone13 {
+  background-color: rgba(241, 218, 138, 255);
+}
+#stone14 {
+  background-color: rgba(241, 206, 64, 255);
+}
+#stone15 {
+  background-color: rgba(251, 187, 90, 255);
+}
+#stone16 {
+  background-color: rgba(189, 140, 107, 255);
+}
+#stone17 {
+  background-color: rgba(222, 231, 164, 255);
+}
+#stone18 {
+  background-color: rgba(235, 231, 44, 255);
+}
+#stone19 {
+  background-color: rgba(214, 205, 88, 255);
+}
+#stone20 {
+  background-color: rgba(115, 99, 66, 255);
+}
+#stone21 {
+  background-color: rgba(137, 179, 71, 255);
+}
+#stone22 {
+  background-color: rgba(152, 178, 129, 255);
+}
+#stone23 {
+  background-color: rgba(103, 154, 79, 255);
+}
+#stone24 {
+  background-color: rgba(120, 123, 54, 255);
+}
+#stone25 {
+  background-color: rgba(194, 225, 191, 255);
+}
+#stone26 {
+  background-color: rgba(133, 208, 201, 255);
+}
+#stone27 {
+  background-color: rgba(18, 184, 170, 255);
+}
+#stone28 {
+  background-color: rgba(14, 156, 132, 255);
+}
+#stone29 {
+  background-color: rgba(172, 219, 201, 255);
+}
+#stone30 {
+  background-color: rgba(124, 175, 176, 255);
+}
+#stone31 {
+  background-color: rgba(54, 106, 166, 255);
+}
+#stone32 {
+  background-color: rgba(49, 73, 111, 255);
+}
+#stone33 {
+  background-color: rgba(214, 174, 209, 255);
+}
+#stone34 {
+  background-color: rgba(157, 155, 203, 255);
+}
+#stone35 {
+  background-color: rgba(125, 101, 163, 255);
+}
+#stone36 {
+  background-color: rgba(94, 52, 98, 255);
+}
+#stone37 {
+  background-color: rgba(148, 106, 90, 255);
+}
+#stone38 {
+  background-color: rgba(107, 90, 73, 255);
+}
+#stone39 {
+  background-color: rgba(212, 154, 104, 255);
+}
+#stone40 {
+  background-color: rgba(191, 191, 191, 255);
+}
+
+#ss1 {
+  background-color: rgba(254, 252, 230, 255);
+}
+#ss2 {
+  background-color: rgba(252, 247, 191, 255);
+}
+#ss3 {
+  background-color: rgba(233, 225, 212, 255);
+}
+#ss4 {
+  background-color: rgba(218, 205, 189, 255);
+}
+#ss5 {
+  background-color: rgba(244, 151, 159, 255);
+}
+#ss6 {
+  background-color: rgba(236, 77, 108, 255);
+}
+#ss7 {
+  background-color: rgba(232, 81, 88, 255);
+}
+#ss8 {
+  background-color: rgba(223, 69, 57, 255);
+}
+#ss9 {
+  background-color: rgba(255, 205, 116, 255);
+}
+#ss10 {
+  background-color: rgba(251, 179, 81, 255);
+}
+#ss11 {
+  background-color: rgba(244, 129, 74, 255);
+}
+#ss12 {
+  background-color: rgba(233, 105, 56, 255);
+}
+#ss13 {
+  background-color: rgba(245, 240, 184, 255);
+}
+#ss14 {
+  background-color: rgba(247, 234, 140, 255);
+}
+#ss15 {
+  background-color: rgba(247, 217, 59, 255);
+}
+#ss16 {
+  background-color: rgba(244, 205, 68, 255);
+}
+#ss17 {
+  background-color: rgba(214, 224, 73, 255);
+}
+#ss18 {
+  background-color: rgba(181, 189, 52, 255);
+}
+#ss19 {
+  background-color: rgba(160, 168, 47, 255);
+}
+#ss20 {
+  background-color: rgba(179, 157, 48, 255);
+}
+#ss21 {
+  background-color: rgba(171, 201, 69, 255);
+}
+#ss22 {
+  background-color: rgba(95, 173, 85, 255);
+}
+#ss23 {
+  background-color: rgba(72, 130, 69, 255);
+}
+#ss24 {
+  background-color: rgba(45, 103, 61, 255);
+}
+#ss25 {
+  background-color: rgba(133, 208, 203, 255);
+}
+#ss26 {
+  background-color: rgba(0, 176, 199, 255);
+}
+#ss27 {
+  background-color: rgba(0, 152, 147, 255);
+}
+#ss28 {
+  background-color: rgba(0, 119, 146, 255);
+}
+#ss29 {
+  background-color: rgba(165, 206, 223, 255);
+}
+#ss30 {
+  background-color: rgba(165, 206, 223, 255);
+}
+#ss31 {
+  background-color: rgba(63, 82, 141, 255);
+}
+#ss32 {
+  background-color: rgba(64, 56, 105, 255);
+}
+#ss33 {
+  background-color: rgba(185, 150, 191, 255);
+}
+#ss34 {
+  background-color: rgba(157, 155, 203, 255);
+}
+#ss35 {
+  background-color: rgba(99, 72, 139, 255);
+}
+#ss36 {
+  background-color: rgba(74, 51, 107, 255);
+}
+#ss37 {
+  background-color: rgba(184, 99, 56, 255);
+}
+#ss38 {
+  background-color: rgba(153, 72, 55, 255);
+}
+#ss39 {
+  background-color: rgba(36, 35, 33, 255);
+}
+#ss40 {
+  background-color: rgba(209, 174, 108, 255);
+}
+
+/*----------------------------------------------------------Summer--------------------------------------------------- */
+
+#sump1 {
+  background-color: rgba(238, 231, 223, 255);
+}
+#sump2 {
+  background-color: rgba(231, 222, 207, 255);
+}
+#sump3 {
+  background-color: rgba(186, 173, 154, 255);
+}
+#sump4 {
+  background-color: rgba(159, 144, 137, 255);
+}
+#sump5 {
+  background-color: rgba(255, 241, 240, 255);
+}
+#sump6 {
+  background-color: rgba(244, 194, 217, 255);
+}
+#sump7 {
+  background-color: rgba(238, 124, 176, 255);
+}
+#sump8 {
+  background-color: rgba(199, 89, 114, 255);
+}
+#sump9 {
+  background-color: rgba(238, 47, 89, 255);
+}
+#sump10 {
+  background-color: rgba(238, 49, 69, 255);
+}
+#sump11 {
+  background-color: rgba(197, 46, 63, 255);
+}
+#sump12 {
+  background-color: rgba(188, 53, 112, 255);
+}
+#sump13 {
+  background-color: rgba(254, 246, 171, 255);
+}
+#sump14 {
+  background-color: rgba(252, 228, 118, 255);
+}
+#sump15 {
+  background-color: rgba(179, 168, 146, 255);
+}
+#sump16 {
+  background-color: rgba(102, 100, 85, 255);
+}
+#sump17 {
+  background-color: rgba(179, 218, 173, 255);
+}
+#sump18 {
+  background-color: rgba(80, 185, 116, 255);
+}
+#sump19 {
+  background-color: rgba(65, 145, 98, 255);
+}
+#sump20 {
+  background-color: rgba(74, 121, 75, 255);
+}
+#sump21 {
+  background-color: rgba(122, 200, 186, 255);
+}
+#sump22 {
+  background-color: rgba(56, 190, 183, 255);
+}
+#sump23 {
+  background-color: rgba(10, 160, 133, 255);
+}
+#sump24 {
+  background-color: rgba(48, 80, 129, 255);
+}
+#sump25 {
+  background-color: rgba(140, 212, 226, 255);
+}
+#sump26 {
+  background-color: rgba(0, 175, 240, 255);
+}
+#sump27 {
+  background-color: rgba(116, 168, 218, 255);
+}
+#sump28 {
+  background-color: rgba(76, 97, 154, 255);
+}
+#sump29 {
+  background-color: rgba(216, 202, 227, 255);
+}
+#sump30 {
+  background-color: rgba(148, 148, 200, 255);
+}
+#sump31 {
+  background-color: rgba(116, 116, 170, 255);
+}
+#sump32 {
+  background-color: rgba(139, 83, 158, 255);
+}
+#sump33 {
+  background-color: rgba(215, 200, 205, 255);
+}
+#sump34 {
+  background-color: rgba(184, 185, 187, 255);
+}
+#sump35 {
+  background-color: rgba(157, 119, 118, 255);
+}
+#sump36 {
+  background-color: rgba(129, 82, 72, 255);
+}
+#sump37 {
+  background-color: rgba(153, 163, 172, 255);
+}
+#sump38 {
+  background-color: rgba(71, 108, 127, 255);
+}
+#sump39 {
+  background-color: rgba(55, 78, 96, 255);
+}
+#sump40 {
+  background-color: rgba(210, 211, 213, 255);
+}
+
+#sumtint1 {
+  background-color: rgba(250, 246, 217, 255);
+}
+#sumtint2 {
+  background-color: rgba(253, 240, 224, 255);
+}
+#sumtint3 {
+  background-color: rgba(239, 238, 236, 255);
+}
+#sumtint4 {
+  background-color: rgba(223, 219, 218, 255);
+}
+#sumtint5 {
+  background-color: rgba(240, 230, 192, 255);
+}
+#sumtint6 {
+  background-color: rgba(236, 201, 146, 255);
+}
+#sumtint7 {
+  background-color: rgba(246, 197, 156, 255);
+}
+#sumtint8 {
+  background-color: rgba(245, 175, 201, 255);
+}
+#sumtint9 {
+  background-color: rgba(243, 137, 163, 255);
+}
+#sumtint10 {
+  background-color: rgba(225, 57, 132, 255);
+}
+#sumtint11 {
+  background-color: rgba(226, 49, 55, 255);
+}
+#sumtint12 {
+  background-color: rgba(197, 46, 63, 255);
+}
+#sumtint13 {
+  background-color: rgba(253, 249, 202, 255);
+}
+#sumtint14 {
+  background-color: rgba(255, 250, 186, 255);
+}
+#sumtint15 {
+  background-color: rgba(255, 241, 142, 255);
+}
+#sumtint16 {
+  background-color: rgba(255, 245, 121, 255);
+}
+#sumtint17 {
+  background-color: rgba(135, 207, 195, 255);
+}
+#sumtint18 {
+  background-color: rgba(113, 197, 159, 255);
+}
+#sumtint19 {
+  background-color: rgba(87, 167, 134, 255);
+}
+#sumtint20 {
+  background-color: rgba(0, 155, 150, 255);
+}
+#sumtint21 {
+  background-color: rgba(117, 204, 219, 255);
+}
+#sumtint22 {
+  background-color: rgba(42, 169, 202, 255);
+}
+#sumtint23 {
+  background-color: rgba(64, 145, 208, 255);
+}
+#sumtint24 {
+  background-color: rgba(8, 106, 169, 255);
+}
+#sumtint25 {
+  background-color: rgba(203, 234, 244, 255);
+}
+#sumtint26 {
+  background-color: rgba(111, 175, 203, 255);
+}
+#sumtint27 {
+  background-color: rgba(70, 105, 159, 255);
+}
+#sumtint28 {
+  background-color: rgba(47, 83, 133, 255);
+}
+#sumtint29 {
+  background-color: rgba(226, 213, 231, 255);
+}
+#sumtint30 {
+  background-color: rgba(197, 156, 196, 255);
+}
+#sumtint31 {
+  background-color: rgba(173, 118, 175, 255);
+}
+#sumtint32 {
+  background-color: rgba(168, 82, 153, 255);
+}
+#sumtint33 {
+  background-color: rgba(212, 213, 215, 255);
+}
+#sumtint34 {
+  background-color: rgba(175, 189, 198, 255);
+}
+#sumtint35 {
+  background-color: rgba(163, 155, 134, 255);
+}
+#sumtint36 {
+  background-color: rgba(102, 100, 85, 255);
+}
+#sumtint37 {
+  background-color: rgba(46, 110, 119, 255);
+}
+#sumtint38 {
+  background-color: rgba(75, 106, 108, 255);
+}
+#sumtint39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#sumtint40 {
+  background-color: rgba(222, 185, 115, 255);
+}
+
+#sumtone1 {
+  background-color: rgba(238, 231, 223, 255);
+}
+#sumtone2 {
+  background-color: rgba(246, 238, 215, 255);
+}
+#sumtone3 {
+  background-color: rgba(231, 222, 207, 255);
+}
+#sumtone4 {
+  background-color: rgba(186, 173, 154, 255);
+}
+#sumtone5 {
+  background-color: rgba(247, 212, 210, 255);
+}
+#sumtone6 {
+  background-color: rgba(235, 172, 191, 255);
+}
+#sumtone7 {
+  background-color: rgba(227, 184, 175, 255);
+}
+#sumtone8 {
+  background-color: rgba(207, 133, 132, 255);
+}
+#sumtone9 {
+  background-color: rgba(246, 160, 163, 255);
+}
+#sumtone10 {
+  background-color: rgba(239, 74, 107, 255);
+}
+#sumtone11 {
+  background-color: rgba(237, 49, 74, 255);
+}
+#sumtone12 {
+  background-color: rgba(170, 45, 69, 255);
+}
+#sumtone13 {
+  background-color: rgba(255, 243, 191, 255);
+}
+#sumtone14 {
+  background-color: rgba(235, 225, 171, 255);
+}
+#sumtone15 {
+  background-color: rgba(194, 225, 183, 255);
+}
+#sumtone16 {
+  background-color: rgba(66, 120, 97, 255);
+}
+#sumtone17 {
+  background-color: rgba(190, 216, 207, 255);
+}
+#sumtone18 {
+  background-color: rgba(124, 197, 144, 255);
+}
+#sumtone19 {
+  background-color: rgba(0, 179, 150, 255);
+}
+#sumtone20 {
+  background-color: rgba(0, 113, 117, 255);
+}
+#sumtone21 {
+  background-color: rgba(146, 196, 233, 255);
+}
+#sumtone22 {
+  background-color: rgba(92, 162, 213, 255);
+}
+#sumtone23 {
+  background-color: rgba(101, 138, 164, 255);
+}
+#sumtone24 {
+  background-color: rgba(9, 79, 129, 255);
+}
+#sumtone25 {
+  background-color: rgba(119, 102, 168, 255);
+}
+#sumtone26 {
+  background-color: rgba(107, 104, 157, 255);
+}
+#sumtone27 {
+  background-color: rgba(61, 87, 161, 255);
+}
+#sumtone28 {
+  background-color: rgba(66, 65, 123, 255);
+}
+#sumtone29 {
+  background-color: rgba(226, 213, 231, 255);
+}
+#sumtone30 {
+  background-color: rgba(197, 156, 196, 255);
+}
+#sumtone31 {
+  background-color: rgba(152, 115, 146, 255);
+}
+#sumtone32 {
+  background-color: rgba(126, 83, 111, 255);
+}
+#sumtone33 {
+  background-color: rgba(195, 186, 179, 255);
+}
+#sumtone34 {
+  background-color: rgba(188, 178, 166, 255);
+}
+#sumtone35 {
+  background-color: rgba(154, 141, 133, 255);
+}
+#sumtone36 {
+  background-color: rgba(169, 136, 105, 255);
+}
+#sumtone37 {
+  background-color: rgba(142, 126, 109, 255);
+}
+#sumtone38 {
+  background-color: rgba(123, 106, 76, 255);
+}
+#sumtone39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#sumtone40 {
+  background-color: rgba(222, 185, 115, 255);
+}
+
+#sums1 {
+  background-color: rgba(248, 239, 240, 255);
+}
+#sums2 {
+  background-color: rgba(220, 203, 173, 255);
+}
+#sums3 {
+  background-color: rgba(213, 202, 154, 255);
+}
+#sums4 {
+  background-color: rgba(202, 192, 183, 255);
+}
+#sums5 {
+  background-color: rgba(221, 202, 204, 255);
+}
+#sums6 {
+  background-color: rgba(217, 185, 198, 255);
+}
+#sums7 {
+  background-color: rgba(211, 201, 212, 255);
+}
+#sums8 {
+  background-color: rgba(207, 202, 206, 255);
+}
+#sums9 {
+  background-color: rgba(214, 90, 150, 255);
+}
+#sums10 {
+  background-color: rgba(201, 102, 149, 255);
+}
+#sums11 {
+  background-color: rgba(150, 56, 118, 255);
+}
+#sums12 {
+  background-color: rgba(124, 44, 69, 255);
+}
+#sums13 {
+  background-color: rgba(241, 225, 65, 255);
+}
+#sums14 {
+  background-color: rgba(220, 210, 53, 255);
+}
+#sums15 {
+  background-color: rgba(236, 50, 55, 255);
+}
+#sums16 {
+  background-color: rgba(208, 52, 56, 255);
+}
+#sums17 {
+  background-color: rgba(110, 165, 82, 255);
+}
+#sums18 {
+  background-color: rgba(59, 115, 68, 255);
+}
+#sums19 {
+  background-color: rgba(36, 92, 89, 255);
+}
+#sums20 {
+  background-color: rgba(40, 54, 55, 255);
+}
+#sums21 {
+  background-color: rgba(146, 172, 193, 255);
+}
+#sums22 {
+  background-color: rgba(120, 173, 191, 255);
+}
+#sums23 {
+  background-color: rgba(109, 126, 142, 255);
+}
+#sums24 {
+  background-color: rgba(54, 61, 90, 255);
+}
+#sums25 {
+  background-color: rgba(133, 166, 199, 255);
+}
+#sums26 {
+  background-color: rgba(3, 166, 225, 255);
+}
+#sums27 {
+  background-color: rgba(55, 126, 192, 255);
+}
+#sums28 {
+  background-color: rgba(54, 67, 119, 255);
+}
+#sums29 {
+  background-color: rgba(179, 148, 190, 255);
+}
+#sums30 {
+  background-color: rgba(155, 125, 179, 255);
+}
+#sums31 {
+  background-color: rgba(105, 84, 151, 255);
+}
+#sums32 {
+  background-color: rgba(105, 49, 96, 255);
+}
+#sums33 {
+  background-color: rgba(181, 179, 184, 255);
+}
+#sums34 {
+  background-color: rgba(163, 160, 167, 255);
+}
+#sums35 {
+  background-color: rgba(114, 44, 45, 255);
+}
+#sums36 {
+  background-color: rgba(88, 63, 59, 255);
+}
+#sums37 {
+  background-color: rgba(64, 64, 64, 255);
+}
+#sums38 {
+  background-color: rgba(32, 30, 31, 255);
+}
+#sums39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#sums40 {
+  background-color: rgba(222, 185, 115, 255);
+}
+
+/*------------------------------------------------------Autumn------------------------------------------- */
+
+#ap1 {
+  background-color: rgba(246, 238, 215, 255);
+}
+#ap2 {
+  background-color: rgba(242, 228, 199, 255);
+}
+#ap3 {
+  background-color: rgba(210, 203, 185, 255);
+}
+#ap4 {
+  background-color: rgba(174, 182, 167, 255);
+}
+#ap5 {
+  background-color: rgba(246, 219, 202, 255);
+}
+#ap6 {
+  background-color: rgba(243, 122, 127, 255);
+}
+#ap7 {
+  background-color: rgba(227, 48, 69, 255);
+}
+#ap8 {
+  background-color: rgba(182, 43, 66, 255);
+}
+#ap9 {
+  background-color: rgba(250, 189, 158, 255);
+}
+#ap10 {
+  background-color: rgba(245, 138, 112, 255);
+}
+#ap11 {
+  background-color: rgba(231, 50, 55, 255);
+}
+#ap12 {
+  background-color: rgba(151, 49, 50, 255);
+}
+#ap13 {
+  background-color: rgba(253, 190, 93, 255);
+}
+#ap14 {
+  background-color: rgba(248, 159, 65, 255);
+}
+#ap15 {
+  background-color: rgba(246, 141, 73, 255);
+}
+#ap16 {
+  background-color: rgba(243, 120, 53, 255);
+}
+#ap17 {
+  background-color: rgba(242, 241, 197, 255);
+}
+#ap18 {
+  background-color: rgba(254, 236, 188, 255);
+}
+#ap19 {
+  background-color: rgba(255, 230, 151, 255);
+}
+#ap20 {
+  background-color: rgba(246, 206, 74, 255);
+}
+#ap21 {
+  background-color: rgba(191, 183, 124, 255);
+}
+#ap22 {
+  background-color: rgba(171, 161, 87, 255);
+}
+#ap23 {
+  background-color: rgba(136, 127, 48, 255);
+}
+#ap24 {
+  background-color: rgba(109, 105, 34, 255);
+}
+#ap25 {
+  background-color: rgba(78, 151, 69, 255);
+}
+#ap26 {
+  background-color: rgba(1, 137, 75, 255);
+}
+#ap27 {
+  background-color: rgba(0, 95, 73, 255);
+}
+#ap28 {
+  background-color: rgba(30, 81, 46, 255);
+}
+#ap29 {
+  background-color: rgba(117, 204, 211, 255);
+}
+#ap30 {
+  background-color: rgba(46, 189, 185, 255);
+}
+#ap31 {
+  background-color: rgba(14, 125, 118, 255);
+}
+#ap32 {
+  background-color: rgba(1, 91, 100, 255);
+}
+#ap33 {
+  background-color: rgba(225, 241, 239, 255);
+}
+#ap34 {
+  background-color: rgba(111, 204, 221, 255);
+}
+#ap35 {
+  background-color: rgba(69, 150, 159, 255);
+}
+#ap36 {
+  background-color: rgba(0, 92, 115, 255);
+}
+#ap37 {
+  background-color: rgba(85, 64, 141, 255);
+}
+#ap38 {
+  background-color: rgba(92, 42, 69, 255);
+}
+#ap39 {
+  background-color: rgba(55, 45, 53, 255);
+}
+#ap40 {
+  background-color: rgba(209, 174, 108, 255);
+}
+
+#atint1 {
+  background-color: rgba(238, 231, 223, 255);
+}
+#atint2 {
+  background-color: rgba(241, 230, 202, 255);
+}
+#atint3 {
+  background-color: rgba(194, 193, 162, 255);
+}
+#atint4 {
+  background-color: rgba(156, 126, 102, 255);
+}
+#atint5 {
+  background-color: rgba(230, 217, 173, 255);
+}
+#atint6 {
+  background-color: rgba(220, 200, 150, 255);
+}
+#atint7 {
+  background-color: rgba(150, 157, 163, 255);
+}
+#atint8 {
+  background-color: rgba(112, 121, 128, 255);
+}
+#atint9 {
+  background-color: rgba(250, 201, 204, 255);
+}
+#atint10 {
+  background-color: rgba(243, 122, 127, 255);
+}
+#atint11 {
+  background-color: rgba(239, 73, 77, 255);
+}
+#atint12 {
+  background-color: rgba(182, 55, 48, 255);
+}
+#atint13 {
+  background-color: rgba(250, 202, 192, 255);
+}
+#atint14 {
+  background-color: rgba(247, 162, 142, 255);
+}
+#atint15 {
+  background-color: rgba(245, 138, 112, 255);
+}
+#atint16 {
+  background-color: rgba(200, 71, 57, 255);
+}
+#atint17 {
+  background-color: rgba(255, 237, 187, 255);
+}
+#atint18 {
+  background-color: rgba(255, 223, 122, 255);
+}
+#atint19 {
+  background-color: rgba(255, 211, 120, 255);
+}
+#atint20 {
+  background-color: rgba(250, 167, 71, 255);
+}
+#atint21 {
+  background-color: rgba(190, 137, 85, 255);
+}
+#atint22 {
+  background-color: rgba(160, 108, 48, 255);
+}
+#atint23 {
+  background-color: rgba(132, 95, 50, 255);
+}
+#atint24 {
+  background-color: rgba(98, 82, 49, 255);
+}
+#atint25 {
+  background-color: rgba(162, 165, 122, 255);
+}
+#atint26 {
+  background-color: rgba(119, 127, 67, 255);
+}
+#atint27 {
+  background-color: rgba(133, 130, 37, 255);
+}
+#atint28 {
+  background-color: rgba(76, 85, 38, 255);
+}
+#atint29 {
+  background-color: rgba(194, 229, 223, 255);
+}
+#atint30 {
+  background-color: rgba(122, 200, 186, 255);
+}
+#atint31 {
+  background-color: rgba(0, 134, 107, 255);
+}
+#atint32 {
+  background-color: rgba(38, 74, 60, 255);
+}
+#atint33 {
+  background-color: rgba(38, 74, 60, 255);
+}
+#atint34 {
+  background-color: rgba(19, 164, 211, 255);
+}
+#atint35 {
+  background-color: rgba(34, 130, 188, 255);
+}
+#atint36 {
+  background-color: rgba(54, 97, 148, 255);
+}
+#atint37 {
+  background-color: rgba(123, 133, 194, 255);
+}
+#atint38 {
+  background-color: rgba(112, 63, 93, 255);
+}
+#atint39 {
+  background-color: rgba(212, 154, 104, 255);
+}
+#atint40 {
+  background-color: rgba(191, 191, 191, 255);
+}
+
+#atone1 {
+  background-color: rgba(247, 242, 210, 255);
+}
+#atone2 {
+  background-color: rgba(238, 235, 230, 255);
+}
+#atone3 {
+  background-color: rgba(217, 209, 196, 255);
+}
+#atone4 {
+  background-color: rgba(136, 126, 117, 255);
+}
+#atone5 {
+  background-color: rgba(255, 242, 213, 255);
+}
+#atone6 {
+  background-color: rgba(248, 183, 189, 255);
+}
+#atone7 {
+  background-color: rgba(242, 167, 148, 255);
+}
+#atone8 {
+  background-color: rgba(238, 61, 87, 255);
+}
+#atone9 {
+  background-color: rgba(242, 117, 115, 255);
+}
+#atone10 {
+  background-color: rgba(227, 121, 108, 255);
+}
+#atone11 {
+  background-color: rgba(238, 66, 56, 255);
+}
+#atone12 {
+  background-color: rgba(154, 50, 51, 255);
+}
+#atone13 {
+  background-color: rgba(247, 203, 116, 255);
+}
+#atone14 {
+  background-color: rgba(247, 149, 112, 255);
+}
+#atone15 {
+  background-color: rgba(242, 105, 63, 255);
+}
+#atone16 {
+  background-color: rgba(212, 51, 56, 255);
+}
+#atone17 {
+  background-color: rgba(251, 243, 170, 255);
+}
+#atone18 {
+  background-color: rgba(251, 239, 121, 255);
+}
+#atone19 {
+  background-color: rgba(233, 234, 140, 255);
+}
+#atone20 {
+  background-color: rgba(198, 193, 91, 255);
+}
+#atone21 {
+  background-color: rgba(218, 143, 59, 255);
+}
+#atone22 {
+  background-color: rgba(182, 150, 112, 255);
+}
+#atone23 {
+  background-color: rgba(141, 100, 56, 255);
+}
+#atone24 {
+  background-color: rgba(48, 69, 72, 255);
+}
+#atone25 {
+  background-color: rgba(151, 204, 192, 255);
+}
+#atone26 {
+  background-color: rgba(138, 172, 112, 255);
+}
+#atone27 {
+  background-color: rgba(120, 131, 71, 255);
+}
+#atone28 {
+  background-color: rgba(66, 96, 98, 255);
+}
+#atone29 {
+  background-color: rgba(102, 192, 191, 255);
+}
+#atone30 {
+  background-color: rgba(15, 178, 149, 255);
+}
+#atone31 {
+  background-color: rgba(4, 156, 107, 255);
+}
+#atone32 {
+  background-color: rgba(57, 112, 143, 255);
+}
+#atone33 {
+  background-color: rgba(119, 127, 189, 255);
+}
+#atone34 {
+  background-color: rgba(52, 105, 157, 255);
+}
+#atone35 {
+  background-color: rgba(36, 90, 118, 255);
+}
+#atone36 {
+  background-color: rgba(75, 52, 108, 255);
+}
+#atone37 {
+  background-color: rgba(123, 45, 69, 255);
+}
+#atone38 {
+  background-color: rgba(81, 41, 68, 255);
+}
+#atone39 {
+  background-color: rgba(212, 154, 104, 255);
+}
+#atone40 {
+  background-color: rgba(191, 191, 191, 255);
+}
+
+#as1 {
+  background-color: rgba(255, 240, 217, 255);
+}
+#as2 {
+  background-color: rgba(255, 228, 185, 255);
+}
+#as3 {
+  background-color: rgba(243, 210, 157, 255);
+}
+#as4 {
+  background-color: rgba(118, 109, 102, 255);
+}
+#as5 {
+  background-color: rgba(237, 73, 152, 255);
+}
+#as6 {
+  background-color: rgba(183, 93, 145, 255);
+}
+#as7 {
+  background-color: rgba(170, 51, 53, 255);
+}
+#as8 {
+  background-color: rgba(154, 50, 51, 255);
+}
+#as9 {
+  background-color: rgba(232, 99, 68, 255);
+}
+#as10 {
+  background-color: rgba(229, 77, 56, 255);
+}
+#as11 {
+  background-color: rgba(222, 51, 57, 255);
+}
+#as12 {
+  background-color: rgba(182, 55, 48, 255);
+}
+#as13 {
+  background-color: rgba(250, 164, 85, 255);
+}
+#as14 {
+  background-color: rgba(244, 135, 56, 255);
+}
+#as15 {
+  background-color: rgba(240, 97, 55, 255);
+}
+#as16 {
+  background-color: rgba(158, 95, 42, 255);
+}
+#as17 {
+  background-color: rgba(255, 230, 151, 255);
+}
+#as18 {
+  background-color: rgba(228, 230, 71, 255);
+}
+#as19 {
+  background-color: rgba(177, 189, 53, 255);
+}
+#as20 {
+  background-color: rgba(166, 143, 65, 255);
+}
+#as21 {
+  background-color: rgba(139, 161, 78, 255);
+}
+#as22 {
+  background-color: rgba(67, 130, 73, 255);
+}
+#as23 {
+  background-color: rgba(109, 105, 34, 255);
+}
+#as24 {
+  background-color: rgba(1, 95, 81, 255);
+}
+#as25 {
+  background-color: rgba(48, 172, 162, 255);
+}
+#as26 {
+  background-color: rgba(29, 163, 113, 255);
+}
+#as27 {
+  background-color: rgba(0, 137, 109, 255);
+}
+#as28 {
+  background-color: rgba(15, 112, 118, 255);
+}
+#as29 {
+  background-color: rgba(22, 166, 203, 255);
+}
+#as30 {
+  background-color: rgba(1, 135, 172, 255);
+}
+#as31 {
+  background-color: rgba(27, 93, 118, 255);
+}
+#as32 {
+  background-color: rgba(43, 66, 84, 255);
+}
+#as33 {
+  background-color: rgba(143, 80, 158, 255);
+}
+#as34 {
+  background-color: rgba(89, 80, 159, 255);
+}
+#as35 {
+  background-color: rgba(98, 50, 98, 255);
+}
+#as36 {
+  background-color: rgba(69, 49, 100, 255);
+}
+#as37 {
+  background-color: rgba(58, 63, 121, 255);
+}
+#as38 {
+  background-color: rgba(54, 52, 53, 255);
+}
+#as39 {
+  background-color: rgba(212, 154, 104, 255);
+}
+#as40 {
+  background-color: rgba(191, 191, 191, 255);
+}
+
+/*------------------------------------------------------Winter------------------------------------------- */
+
+#wp1 {
+  background-color: rgba(254, 254, 254, 255);
+}
+#wp2 {
+  background-color: rgba(236, 236, 236, 255);
+}
+#wp3 {
+  background-color: rgba(214, 214, 214, 255);
+}
+#wp4 {
+  background-color: rgba(136, 132, 131, 255);
+}
+#wp5 {
+  background-color: rgba(242, 188, 201, 255);
+}
+#wp6 {
+  background-color: rgba(242, 145, 180, 255);
+}
+#wp7 {
+  background-color: rgba(232, 87, 130, 255);
+}
+#wp8 {
+  background-color: rgba(226, 48, 100, 255);
+}
+#wp9 {
+  background-color: rgba(222, 92, 154, 255);
+}
+#wp10 {
+  background-color: rgba(237, 45, 105, 255);
+}
+#wp11 {
+  background-color: rgba(216, 49, 92, 255);
+}
+#wp12 {
+  background-color: rgba(177, 52, 60, 255);
+}
+#wp13 {
+  background-color: rgba(249, 242, 128, 255);
+}
+#wp14 {
+  background-color: rgba(251, 234, 30, 255);
+}
+#wp15 {
+  background-color: rgba(244, 126, 86, 255);
+}
+#wp16 {
+  background-color: rgba(231, 50, 55, 255);
+}
+#wp17 {
+  background-color: rgba(112, 200, 188, 255);
+}
+#wp18 {
+  background-color: rgba(14, 147, 142, 255);
+}
+#wp19 {
+  background-color: rgba(16, 156, 83, 255);
+}
+#wp20 {
+  background-color: rgba(51, 81, 55, 255);
+}
+#wp21 {
+  background-color: rgba(157, 203, 235, 255);
+}
+#wp22 {
+  background-color: rgba(90, 128, 191, 255);
+}
+#wp23 {
+  background-color: rgba(61, 93, 168, 255);
+}
+#wp24 {
+  background-color: rgba(50, 56, 114, 255);
+}
+#wp25 {
+  background-color: rgba(160, 137, 192, 255);
+}
+#wp26 {
+  background-color: rgba(127, 96, 166, 255);
+}
+#wp27 {
+  background-color: rgba(107, 68, 151, 255);
+}
+#wp28 {
+  background-color: rgba(83, 59, 135, 255);
+}
+#wp29 {
+  background-color: rgba(232, 210, 230, 255);
+}
+#wp30 {
+  background-color: rgba(187, 124, 179, 255);
+}
+#wp31 {
+  background-color: rgba(200, 105, 169, 255);
+}
+#wp32 {
+  background-color: rgba(156, 56, 146, 255);
+}
+#wp33 {
+  background-color: rgba(194, 194, 194, 255);
+}
+#wp34 {
+  background-color: rgba(129, 125, 124, 255);
+}
+#wp35 {
+  background-color: rgba(66, 66, 66, 255);
+}
+#wp36 {
+  background-color: rgba(40, 40, 42, 255);
+}
+#wp37 {
+  background-color: rgba(61, 45, 46, 255);
+}
+#wp38 {
+  background-color: rgba(30, 40, 41, 255);
+}
+#wp39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#wp40 {
+  background-color: rgba(222, 185, 115, 255);
+}
+
+#wtint1 {
+  background-color: rgba(254, 254, 254, 255);
+}
+#wtint2 {
+  background-color: rgba(241, 237, 236, 255);
+}
+#wtint3 {
+  background-color: rgba(212, 207, 201, 255);
+}
+#wtint4 {
+  background-color: rgba(188, 178, 176, 255);
+}
+#wtint5 {
+  background-color: rgba(243, 215, 230, 255);
+}
+#wtint6 {
+  background-color: rgba(209, 137, 187, 255);
+}
+#wtint7 {
+  background-color: rgba(232, 87, 130, 255);
+}
+#wtint8 {
+  background-color: rgba(189, 51, 113, 255);
+}
+#wtint9 {
+  background-color: rgba(249, 245, 174, 255);
+}
+#wtint10 {
+  background-color: rgba(247, 240, 124, 255);
+}
+#wtint11 {
+  background-color: rgba(251, 240, 116, 255);
+}
+#wtint12 {
+  background-color: rgba(239, 52, 79, 255);
+}
+#wtint13 {
+  background-color: rgba(194, 225, 183, 255);
+}
+#wtint14 {
+  background-color: rgba(124, 197, 144, 255);
+}
+#wtint15 {
+  background-color: rgba(43, 141, 92, 255);
+}
+#wtint16 {
+  background-color: rgba(36, 88, 66, 255);
+}
+#wtint17 {
+  background-color: rgba(193, 229, 227, 255);
+}
+#wtint18 {
+  background-color: rgba(129, 190, 209, 255);
+}
+#wtint19 {
+  background-color: rgba(47, 121, 134, 255);
+}
+#wtint20 {
+  background-color: rgba(30, 90, 117, 255);
+}
+#wtint21 {
+  background-color: rgba(190, 231, 249, 255);
+}
+#wtint22 {
+  background-color: rgba(34, 173, 228, 255);
+}
+#wtint23 {
+  background-color: rgba(25, 112, 183, 255);
+}
+#wtint24 {
+  background-color: rgba(53, 69, 147, 255);
+}
+#wtint25 {
+  background-color: rgba(160, 137, 192, 255);
+}
+#wtint26 {
+  background-color: rgba(127, 96, 166, 255);
+}
+#wtint27 {
+  background-color: rgba(107, 68, 151, 255);
+}
+#wtint28 {
+  background-color: rgba(83, 59, 135, 255);
+}
+#wtint29 {
+  background-color: rgba(219, 161, 201, 255);
+}
+#wtint30 {
+  background-color: rgba(190, 104, 167, 255);
+}
+#wtint31 {
+  background-color: rgba(172, 75, 154, 255);
+}
+#wtint32 {
+  background-color: rgba(147, 52, 106, 255);
+}
+#wtint33 {
+  background-color: rgba(194, 194, 194, 255);
+}
+#wtint34 {
+  background-color: rgba(129, 125, 124, 255);
+}
+#wtint35 {
+  background-color: rgba(66, 66, 66, 255);
+}
+#wtint36 {
+  background-color: rgba(40, 40, 42, 255);
+}
+#wtint37 {
+  background-color: rgba(132, 134, 136, 255);
+}
+#wtint38 {
+  background-color: rgba(71, 47, 43, 255);
+}
+#wtint39 {
+  background-color: rgba(30, 40, 41, 255);
+}
+#wtint40 {
+  background-color: rgba(210, 211, 213, 255);
+}
+
+#wtone1 {
+  background-color: rgba(254, 254, 254, 255);
+}
+#wtone2 {
+  background-color: rgba(244, 240, 239, 255);
+}
+#wtone3 {
+  background-color: rgba(212, 207, 213, 255);
+}
+#wtone4 {
+  background-color: rgba(143, 127, 138, 255);
+}
+#wtone5 {
+  background-color: rgba(243, 200, 209, 255);
+}
+#wtone6 {
+  background-color: rgba(224, 116, 155, 255);
+}
+#wtone7 {
+  background-color: rgba(205, 59, 124, 255);
+}
+#wtone8 {
+  background-color: rgba(179, 51, 108, 255);
+}
+#wtone9 {
+  background-color: rgba(209, 155, 155, 255);
+}
+#wtone10 {
+  background-color: rgba(218, 92, 104, 255);
+}
+#wtone11 {
+  background-color: rgba(199, 53, 56, 255);
+}
+#wtone12 {
+  background-color: rgba(119, 44, 48, 255);
+}
+#wtone13 {
+  background-color: rgba(251, 249, 211, 255);
+}
+#wtone14 {
+  background-color: rgba(239, 235, 144, 255);
+}
+#wtone15 {
+  background-color: rgba(235, 207, 141, 255);
+}
+#wtone16 {
+  background-color: rgba(183, 160, 108, 255);
+}
+#wtone17 {
+  background-color: rgba(186, 214, 215, 255);
+}
+#wtone18 {
+  background-color: rgba(113, 176, 181, 255);
+}
+#wtone19 {
+  background-color: rgba(70, 144, 137, 255);
+}
+#wtone20 {
+  background-color: rgba(44, 89, 82, 255);
+}
+#wtone21 {
+  background-color: rgba(177, 200, 232, 255);
+}
+#wtone22 {
+  background-color: rgba(90, 127, 180, 255);
+}
+#wtone23 {
+  background-color: rgba(51, 70, 113, 255);
+}
+#wtone24 {
+  background-color: rgba(43, 46, 89, 255);
+}
+#wtone25 {
+  background-color: rgba(191, 178, 214, 255);
+}
+#wtone26 {
+  background-color: rgba(133, 102, 170, 255);
+}
+#wtone27 {
+  background-color: rgba(80, 58, 122, 255);
+}
+#wtone28 {
+  background-color: rgba(83, 52, 93, 255);
+}
+#wtone29 {
+  background-color: rgba(236, 224, 238, 255);
+}
+#wtone30 {
+  background-color: rgba(216, 178, 199, 255);
+}
+#wtone31 {
+  background-color: rgba(156, 111, 130, 255);
+}
+#wtone32 {
+  background-color: rgba(131, 55, 117, 255);
+}
+#wtone33 {
+  background-color: rgba(204, 194, 193, 255);
+}
+#wtone34 {
+  background-color: rgba(142, 124, 124, 255);
+}
+#wtone35 {
+  background-color: rgba(82, 66, 66, 255);
+}
+#wtone36 {
+  background-color: rgba(40, 40, 42, 255);
+}
+#wtone37 {
+  background-color: rgba(61, 45, 46, 255);
+}
+#wtone38 {
+  background-color: rgba(30, 40, 41, 255);
+}
+#wtone39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#wtone40 {
+  background-color: rgba(222, 185, 115, 255);
+}
+
+#ws1 {
+  background-color: rgba(254, 254, 254, 255);
+}
+#ws2 {
+  background-color: rgba(232, 225, 205, 255);
+}
+#ws3 {
+  background-color: rgba(188, 172, 146, 255);
+}
+#ws4 {
+  background-color: rgba(105, 93, 69, 255);
+}
+#ws5 {
+  background-color: rgba(248, 205, 223, 255);
+}
+#ws6 {
+  background-color: rgba(244, 149, 179, 255);
+}
+#ws7 {
+  background-color: rgba(204, 75, 155, 255);
+}
+#ws8 {
+  background-color: rgba(148, 48, 84, 255);
+}
+#ws9 {
+  background-color: rgba(242, 112, 114, 255);
+}
+#ws10 {
+  background-color: rgba(236, 50, 55, 255);
+}
+#ws11 {
+  background-color: rgba(195, 53, 57, 255);
+}
+#ws12 {
+  background-color: rgba(133, 47, 48, 255);
+}
+#ws13 {
+  background-color: rgba(249, 243, 157, 255);
+}
+#ws14 {
+  background-color: rgba(251, 240, 116, 255);
+}
+#ws15 {
+  background-color: rgba(247, 192, 47, 255);
+}
+#ws16 {
+  background-color: rgba(84, 42, 66, 255);
+}
+#ws17 {
+  background-color: rgba(66, 180, 108, 255);
+}
+#ws18 {
+  background-color: rgba(12, 147, 80, 255);
+}
+#ws19 {
+  background-color: rgba(19, 114, 70, 255);
+}
+#ws20 {
+  background-color: rgba(65, 84, 54, 255);
+}
+#ws21 {
+  background-color: rgba(113, 192, 195, 255);
+}
+#ws22 {
+  background-color: rgba(12, 147, 143, 255);
+}
+#ws23 {
+  background-color: rgba(9, 119, 110, 255);
+}
+#ws24 {
+  background-color: rgba(31, 72, 78, 255);
+}
+#ws25 {
+  background-color: rgba(127, 208, 225, 255);
+}
+#ws26 {
+  background-color: rgba(69, 149, 208, 255);
+}
+#ws27 {
+  background-color: rgba(50, 96, 171, 255);
+}
+#ws28 {
+  background-color: rgba(52, 56, 117, 255);
+}
+#ws29 {
+  background-color: rgba(152, 131, 188, 255);
+}
+#ws30 {
+  background-color: rgba(115, 89, 163, 255);
+}
+#ws31 {
+  background-color: rgba(129, 59, 147, 255);
+}
+#ws32 {
+  background-color: rgba(74, 51, 107, 255);
+}
+#ws33 {
+  background-color: rgba(193, 193, 193, 255);
+}
+#ws34 {
+  background-color: rgba(129, 125, 124, 255);
+}
+#ws35 {
+  background-color: rgba(66, 66, 66, 255);
+}
+#ws36 {
+  background-color: rgba(40, 40, 42, 255);
+}
+#ws37 {
+  background-color: rgba(60, 46, 43, 255);
+}
+#ws38 {
+  background-color: rgba(30, 40, 41, 255);
+}
+#ws39 {
+  background-color: rgba(191, 191, 191, 255);
+}
+#ws40 {
+  background-color: rgba(222, 185, 115, 255);
 }

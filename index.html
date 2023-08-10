@@ -22,37 +22,50 @@
     </header>
     <main>
       <section id="intro">
-        <p id="step">Paso: 1</p>
-        <p id="number-of-question">Pregunta: 1/12</p>
+        <p id="step"></p>
+        <p id="number-of-question"></p>
         <p id="step-info">
-          El primer paso es determinar la temperatura del color. Hay que
-          determinar si somos de paleta fría o cálida. Es importante no elegir
-          los colores según nuestra preferencia, sino prestar atención a cual
-          resalta mejor nuestras carcterísticas. Para realizar el test es
-          importante que la foto a utilizar no tenga fondo, que el rostro se
-          encuentre despejado, sin maquillaje ni accesorios.
+          
         </p>
       </section>
       <section id="color-display">
-        <div id="color-1"></div>
-        <div id="image-container"><img src="foto-andre.png" id="image" /></div>
-        <div id="color-2"></div>
+        <div id="color-1" hidden></div>
+        <div id="image-container">
+        <form method="post" enctype="multipart/form-data" >
+          <div >
+            <div for="image_uploads" class="upload-text" id="upload-instructions">Para realizar el test es
+              importante que la foto a utilizar no tenga fondo, que el rostro se
+              encuentre despejado, sin maquillaje ni accesorios.</div>
+            <input
+              type="file"
+              id="image_uploads"
+              name="image_uploads"
+              accept=".jpg, .jpeg, .png"
+              class="upload-text"
+               />
+          </div>
+          <div class="preview"  >
+          </div>
+        </form>
+      </div>
+        <div id="color-2" hidden></div>
       </section>
       <section id="answers">
-        <form name="forms" id="forms">
+        <form name="forms" id="forms" >
           <div class="answer" name="answer">
-            <label for="option-1" class="answer-label" id="option-1"
-              >Paleta fría</label
+            <label for="option-1" class="answer-label test" id="option-1" 
+              >  Paleta fría</label
             >
             <input
               id="radio-option-1"
               type="radio"
               name="answer_1"
               value="option-1"
+              
             />
           </div>
           <div class="answer">
-            <label for="option-2" class="answer-label" id="option-2"
+            <label for="option-2" class="answer-label test" id="option-2" 
               >Paleta cálida</label
             >
             <input
@@ -60,13 +73,14 @@
               type="radio"
               name="answer_1"
               value="option-2"
+              
             />
           </div>
           <input type="submit" value="Proxima pregunta" id="submit-answer" />
         </form>
 
-        <div id="results">Resultados</div>
-        <div id="summary">
+        <div id="results" >Resultados</div>
+        <div id="summary" >
           <p id="palette-selection"></p>
           <p id="season-selection"></p>
           <p id="final-season-selection"></p>
@@ -82,46 +96,46 @@
         <div class="season-tile">
           <div class="season-name" id="spring-pure">Primavera Pura</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="sp1" class="color-box">Color 1</div>
+            <div id="sp2" class="color-box">Color 2</div>
+            <div id="sp3" class="color-box">Color 3</div>
+            <div id="sp4" class="color-box">Color 4</div>
+            <div id="sp5" class="color-box">Color 5</div>
+            <div id="sp6" class="color-box">Color 6</div>
+            <div id="sp7" class="color-box">Color 7</div>
+            <div id="sp8" class="color-box">Color 8</div>
+            <div id="sp9" class="color-box">Color 9</div>
+            <div id="sp10" class="color-box">Color 10</div>
+            <div id="sp11" class="color-box">Color 11</div>
+            <div id="sp12" class="color-box">Color 12</div>
+            <div id="sp13" class="color-box">Color 13</div>
+            <div id="sp14" class="color-box">Color 14</div>
+            <div id="sp15" class="color-box">Color 15</div>
+            <div id="sp16" class="color-box">Color 16</div>
+            <div id="sp17" class="color-box">Color 17</div>
+            <div id="sp18" class="color-box">Color 18</div>
+            <div id="sp19" class="color-box">Color 19</div>
+            <div id="sp20" class="color-box">Color 20</div>
+            <div id="sp21" class="color-box">Color 21</div>
+            <div id="sp22" class="color-box">Color 22</div>
+            <div id="sp23" class="color-box">Color 23</div>
+            <div id="sp24" class="color-box">Color 24</div>
+            <div id="sp25" class="color-box">Color 25</div>
+            <div id="sp26" class="color-box">Color 26</div>
+            <div id="sp27" class="color-box">Color 27</div>
+            <div id="sp28" class="color-box">Color 28</div>
+            <div id="sp29" class="color-box">Color 29</div>
+            <div id="sp30" class="color-box">Color 30</div>
+            <div id="sp31" class="color-box">Color 31</div>
+            <div id="sp32" class="color-box">Color 32</div>
+            <div id="sp33" class="color-box">Color 33</div>
+            <div id="sp34" class="color-box">Color 34</div>
+            <div id="sp35" class="color-box">Color 35</div>
+            <div id="sp36" class="color-box">Color 36</div>
+            <div id="sp37" class="color-box">Color 37</div>
+            <div id="sp38" class="color-box">Color 38</div>
+            <div id="sp39" class="color-box">Color 39</div>
+            <div id="sp40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
             Esta primavera es la más brillante y saturada de las cuatro. No
@@ -137,826 +151,843 @@
         <div class="season-tile">
           <div class="season-name" id="spring-tint">Primavera Clara</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="stint1" class="color-box">Color 1</div>
+            <div id="stint2" class="color-box">Color 2</div>
+            <div id="stint3" class="color-box">Color 3</div>
+            <div id="stint4" class="color-box">Color 4</div>
+            <div id="stint5" class="color-box">Color 5</div>
+            <div id="stint6" class="color-box">Color 6</div>
+            <div id="stint7" class="color-box">Color 7</div>
+            <div id="stint8" class="color-box">Color 8</div>
+            <div id="stint9" class="color-box">Color 9</div>
+            <div id="stint10" class="color-box">Color 10</div>
+            <div id="stint11" class="color-box">Color 11</div>
+            <div id="stint12" class="color-box">Color 12</div>
+            <div id="stint13" class="color-box">Color 13</div>
+            <div id="stint14" class="color-box">Color 14</div>
+            <div id="stint15" class="color-box">Color 15</div>
+            <div id="stint16" class="color-box">Color 16</div>
+            <div id="stint17" class="color-box">Color 17</div>
+            <div id="stint18" class="color-box">Color 18</div>
+            <div id="stint19" class="color-box">Color 19</div>
+            <div id="stint20" class="color-box">Color 20</div>
+            <div id="stint21" class="color-box">Color 21</div>
+            <div id="stint22" class="color-box">Color 22</div>
+            <div id="stint23" class="color-box">Color 23</div>
+            <div id="stint24" class="color-box">Color 24</div>
+            <div id="stint25" class="color-box">Color 25</div>
+            <div id="stint26" class="color-box">Color 26</div>
+            <div id="stint27" class="color-box">Color 27</div>
+            <div id="stint28" class="color-box">Color 28</div>
+            <div id="stint29" class="color-box">Color 29</div>
+            <div id="stint30" class="color-box">Color 30</div>
+            <div id="stint31" class="color-box">Color 31</div>
+            <div id="stint32" class="color-box">Color 32</div>
+            <div id="stint33" class="color-box">Color 33</div>
+            <div id="stint34" class="color-box">Color 34</div>
+            <div id="stint35" class="color-box">Color 35</div>
+            <div id="stint36" class="color-box">Color 36</div>
+            <div id="stint37" class="color-box">Color 37</div>
+            <div id="stint38" class="color-box">Color 38</div>
+            <div id="stint39" class="color-box">Color 39</div>
+            <div id="stint40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Aquí encontraremos los tonos de piel, ojos y cabellos más claros de 
+las cuatro categorías. Existe poco contraste entre ojos, cabello y 
+piel. Si bien es una estación clara, tiene todo el poder de una 
+primavera. 
+En su paleta encontraremos cálidos y algunos fríos, pero en su 
+mayoría son claros y algo neutros si los comparamos con la 
+Primavera Oscura (Verdadera) y más claros y delicados 
+comparados con la Primavera Pura (Brillante). 
+Esta estación pide usar colores claros y luminosos. Nada de 
+oscuros o demasiado profundos ya que la pueden opacar.
+Mejores colores: gris perla claro, aqua claro, manteca, durazno 
+claro y marfil.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="spring-tone">Primavera Neutra</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="stone1" class="color-box">Color 1</div>
+            <div id="stone2" class="color-box">Color 2</div>
+            <div id="stone3" class="color-box">Color 3</div>
+            <div id="stone4" class="color-box">Color 4</div>
+            <div id="stone5" class="color-box">Color 5</div>
+            <div id="stone6" class="color-box">Color 6</div>
+            <div id="stone7" class="color-box">Color 7</div>
+            <div id="stone8" class="color-box">Color 8</div>
+            <div id="stone9" class="color-box">Color 9</div>
+            <div id="stone10" class="color-box">Color 10</div>
+            <div id="stone11" class="color-box">Color 11</div>
+            <div id="stone12" class="color-box">Color 12</div>
+            <div id="stone13" class="color-box">Color 13</div>
+            <div id="stone14" class="color-box">Color 14</div>
+            <div id="stone15" class="color-box">Color 15</div>
+            <div id="stone16" class="color-box">Color 16</div>
+            <div id="stone17" class="color-box">Color 17</div>
+            <div id="stone18" class="color-box">Color 18</div>
+            <div id="stone19" class="color-box">Color 19</div>
+            <div id="stone20" class="color-box">Color 20</div>
+            <div id="stone21" class="color-box">Color 21</div>
+            <div id="stone22" class="color-box">Color 22</div>
+            <div id="stone23" class="color-box">Color 23</div>
+            <div id="stone24" class="color-box">Color 24</div>
+            <div id="stone25" class="color-box">Color 25</div>
+            <div id="stone26" class="color-box">Color 26</div>
+            <div id="stone27" class="color-box">Color 27</div>
+            <div id="stone28" class="color-box">Color 28</div>
+            <div id="stone29" class="color-box">Color 29</div>
+            <div id="stone30" class="color-box">Color 30</div>
+            <div id="stone31" class="color-box">Color 31</div>
+            <div id="stone32" class="color-box">Color 32</div>
+            <div id="stone33" class="color-box">Color 33</div>
+            <div id="stone34" class="color-box">Color 34</div>
+            <div id="stone35" class="color-box">Color 35</div>
+            <div id="stone36" class="color-box">Color 36</div>
+            <div id="stone37" class="color-box">Color 37</div>
+            <div id="stone38" class="color-box">Color 38</div>
+            <div id="stone39" class="color-box">Color 39</div>
+            <div id="stone40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Es más suave que la primavera clara y más clara que el otoño 
+suave. Antes de las 16 estaciones, muchas personas con estas 
+características eran catalogadas como Otoños Suaves o 
+Primaveras Claras. Esto es incorrecto dado que esta estación 
+necesita una suavidad no encontrada en ninguna primavera, pero 
+un valor más claro no encontrado en ningún otoño. 
+Los mejores colores son: durazno y amarillos, verde apio, marrones 
+claros y neutros como el gris piedra, arena y khaki. Si crees que los 
+colores del otoño suave son muy fuertes o aburridos y los de la 
+primavera clara demasiado fuertes, entonces es probable que seas 
+una Primavera neutra.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="spring-shade">Primavera Oscura</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="ss1" class="color-box">Color 1</div>
+            <div id="ss2" class="color-box">Color 2</div>
+            <div id="ss3" class="color-box">Color 3</div>
+            <div id="ss4" class="color-box">Color 4</div>
+            <div id="ss5" class="color-box">Color 5</div>
+            <div id="ss6" class="color-box">Color 6</div>
+            <div id="ss7" class="color-box">Color 7</div>
+            <div id="ss8" class="color-box">Color 8</div>
+            <div id="ss9" class="color-box">Color 9</div>
+            <div id="ss10" class="color-box">Color 10</div>
+            <div id="ss11" class="color-box">Color 11</div>
+            <div id="ss12" class="color-box">Color 12</div>
+            <div id="ss13" class="color-box">Color 13</div>
+            <div id="ss14" class="color-box">Color 14</div>
+            <div id="ss15" class="color-box">Color 15</div>
+            <div id="ss16" class="color-box">Color 16</div>
+            <div id="ss17" class="color-box">Color 17</div>
+            <div id="ss18" class="color-box">Color 18</div>
+            <div id="ss19" class="color-box">Color 19</div>
+            <div id="ss20" class="color-box">Color 20</div>
+            <div id="ss21" class="color-box">Color 21</div>
+            <div id="ss22" class="color-box">Color 22</div>
+            <div id="ss23" class="color-box">Color 23</div>
+            <div id="ss24" class="color-box">Color 24</div>
+            <div id="ss25" class="color-box">Color 25</div>
+            <div id="ss26" class="color-box">Color 26</div>
+            <div id="ss27" class="color-box">Color 27</div>
+            <div id="ss28" class="color-box">Color 28</div>
+            <div id="ss29" class="color-box">Color 29</div>
+            <div id="ss30" class="color-box">Color 30</div>
+            <div id="ss31" class="color-box">Color 31</div>
+            <div id="ss32" class="color-box">Color 32</div>
+            <div id="ss33" class="color-box">Color 33</div>
+            <div id="ss34" class="color-box">Color 34</div>
+            <div id="ss35" class="color-box">Color 35</div>
+            <div id="ss36" class="color-box">Color 36</div>
+            <div id="ss37" class="color-box">Color 37</div>
+            <div id="ss38" class="color-box">Color 38</div>
+            <div id="ss39" class="color-box">Color 39</div>
+            <div id="ss40" class="color-box">Color 40</div>
           </div>
-          <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            <div class="season-info">
+              Esta es la categoría más profunda o pesada de las cuatro 
+primaveras. Por supuesto que es una estación clara comparada 
+con los Otoños. La característica más preponderante es que son 
+cálidas y por eso llevan la paleta más cálida de todas las 
+primaveras. 
+Los mejores colores: cobre, durazno, amarillo dorado y coral. 
+Muchos verdes amarillentos. Deben evitar los tonos fríos y los rojos.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="summer-pure">Verano Puro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="sump1" class="color-box">Color 1</div>
+            <div id="sump2" class="color-box">Color 2</div>
+            <div id="sump3" class="color-box">Color 3</div>
+            <div id="sump4" class="color-box">Color 4</div>
+            <div id="sump5" class="color-box">Color 5</div>
+            <div id="sump6" class="color-box">Color 6</div>
+            <div id="sump7" class="color-box">Color 7</div>
+            <div id="sump8" class="color-box">Color 8</div>
+            <div id="sump9" class="color-box">Color 9</div>
+            <div id="sump10" class="color-box">Color 10</div>
+            <div id="sump11" class="color-box">Color 11</div>
+            <div id="sump12" class="color-box">Color 12</div>
+            <div id="sump13" class="color-box">Color 13</div>
+            <div id="sump14" class="color-box">Color 14</div>
+            <div id="sump15" class="color-box">Color 15</div>
+            <div id="sump16" class="color-box">Color 16</div>
+            <div id="sump17" class="color-box">Color 17</div>
+            <div id="sump18" class="color-box">Color 18</div>
+            <div id="sump19" class="color-box">Color 19</div>
+            <div id="sump20" class="color-box">Color 20</div>
+            <div id="sump21" class="color-box">Color 21</div>
+            <div id="sump22" class="color-box">Color 22</div>
+            <div id="sump23" class="color-box">Color 23</div>
+            <div id="sump24" class="color-box">Color 24</div>
+            <div id="sump25" class="color-box">Color 25</div>
+            <div id="sump26" class="color-box">Color 26</div>
+            <div id="sump27" class="color-box">Color 27</div>
+            <div id="sump28" class="color-box">Color 28</div>
+            <div id="sump29" class="color-box">Color 29</div>
+            <div id="sump30" class="color-box">Color 30</div>
+            <div id="sump31" class="color-box">Color 31</div>
+            <div id="sump32" class="color-box">Color 32</div>
+            <div id="sump33" class="color-box">Color 33</div>
+            <div id="sump34" class="color-box">Color 34</div>
+            <div id="sump35" class="color-box">Color 35</div>
+            <div id="sump36" class="color-box">Color 36</div>
+            <div id="sump37" class="color-box">Color 37</div>
+            <div id="sump38" class="color-box">Color 38</div>
+            <div id="sump39" class="color-box">Color 39</div>
+            <div id="sump40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El Verano Puro lleva los colores más puros y con cuerpo de todos 
+los veranos. Casi todos los veranos presentan un halo rosado en su 
+piel bien traslúcida. 
+Los mejores colores: los fríos claros como ser celestes, grises, rosas y 
+lavandas. Tienen que evitar los dorados y los marrones cálidos. La 
+mejor alternativa al negro es un gris carbón.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="summer-tint">Verano Claro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="sumtint1" class="color-box">Color 1</div>
+            <div id="sumtint2" class="color-box">Color 2</div>
+            <div id="sumtint3" class="color-box">Color 3</div>
+            <div id="sumtint4" class="color-box">Color 4</div>
+            <div id="sumtint5" class="color-box">Color 5</div>
+            <div id="sumtint6" class="color-box">Color 6</div>
+            <div id="sumtint7" class="color-box">Color 7</div>
+            <div id="sumtint8" class="color-box">Color 8</div>
+            <div id="sumtint9" class="color-box">Color 9</div>
+            <div id="sumtint10" class="color-box">Color 10</div>
+            <div id="sumtint11" class="color-box">Color 11</div>
+            <div id="sumtint12" class="color-box">Color 12</div>
+            <div id="sumtint13" class="color-box">Color 13</div>
+            <div id="sumtint14" class="color-box">Color 14</div>
+            <div id="sumtint15" class="color-box">Color 15</div>
+            <div id="sumtint16" class="color-box">Color 16</div>
+            <div id="sumtint17" class="color-box">Color 17</div>
+            <div id="sumtint18" class="color-box">Color 18</div>
+            <div id="sumtint19" class="color-box">Color 19</div>
+            <div id="sumtint20" class="color-box">Color 20</div>
+            <div id="sumtint21" class="color-box">Color 21</div>
+            <div id="sumtint22" class="color-box">Color 22</div>
+            <div id="sumtint23" class="color-box">Color 23</div>
+            <div id="sumtint24" class="color-box">Color 24</div>
+            <div id="sumtint25" class="color-box">Color 25</div>
+            <div id="sumtint26" class="color-box">Color 26</div>
+            <div id="sumtint27" class="color-box">Color 27</div>
+            <div id="sumtint28" class="color-box">Color 28</div>
+            <div id="sumtint29" class="color-box">Color 29</div>
+            <div id="sumtint30" class="color-box">Color 30</div>
+            <div id="sumtint31" class="color-box">Color 31</div>
+            <div id="sumtint32" class="color-box">Color 32</div>
+            <div id="sumtint33" class="color-box">Color 33</div>
+            <div id="sumtint34" class="color-box">Color 34</div>
+            <div id="sumtint35" class="color-box">Color 35</div>
+            <div id="sumtint36" class="color-box">Color 36</div>
+            <div id="sumtint37" class="color-box">Color 37</div>
+            <div id="sumtint38" class="color-box">Color 38</div>
+            <div id="sumtint39" class="color-box">Color 39</div>
+            <div id="sumtint40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El Verano Claro será el más claro de todas las estaciones, por 
+ende, todas sus características son claras (ojos, cabello y piel) con 
+poco contraste entre ellos. Los ojos generalmente serán celestosos 
+o grisáceos, algunas veces un avellana lavado. Su armonía es 
+delicada y pálida. 
+La gracia estará en elegir los tonos claros y fríos, sin mucha 
+oposición ni contrastes. Los mejores colores: los tonos pasteles 
+neutros en la gama de grises y celestes, rosa palo, blancos piedra. 
+Como alternativa al negro, que no se presenta como opción en su 
+paleta, podemos sugerir azul marino claro o gris perla.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="summer-tone">Verano Neutro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="sumtone1" class="color-box">Color 1</div>
+            <div id="sumtone2" class="color-box">Color 2</div>
+            <div id="sumtone3" class="color-box">Color 3</div>
+            <div id="sumtone4" class="color-box">Color 4</div>
+            <div id="sumtone5" class="color-box">Color 5</div>
+            <div id="sumtone6" class="color-box">Color 6</div>
+            <div id="sumtone7" class="color-box">Color 7</div>
+            <div id="sumtone8" class="color-box">Color 8</div>
+            <div id="sumtone9" class="color-box">Color 9</div>
+            <div id="sumtone10" class="color-box">Color 10</div>
+            <div id="sumtone11" class="color-box">Color 11</div>
+            <div id="sumtone12" class="color-box">Color 12</div>
+            <div id="sumtone13" class="color-box">Color 13</div>
+            <div id="sumtone14" class="color-box">Color 14</div>
+            <div id="sumtone15" class="color-box">Color 15</div>
+            <div id="sumtone16" class="color-box">Color 16</div>
+            <div id="sumtone17" class="color-box">Color 17</div>
+            <div id="sumtone18" class="color-box">Color 18</div>
+            <div id="sumtone19" class="color-box">Color 19</div>
+            <div id="sumtone20" class="color-box">Color 20</div>
+            <div id="sumtone21" class="color-box">Color 21</div>
+            <div id="sumtone22" class="color-box">Color 22</div>
+            <div id="sumtone23" class="color-box">Color 23</div>
+            <div id="sumtone24" class="color-box">Color 24</div>
+            <div id="sumtone25" class="color-box">Color 25</div>
+            <div id="sumtone26" class="color-box">Color 26</div>
+            <div id="sumtone27" class="color-box">Color 27</div>
+            <div id="sumtone28" class="color-box">Color 28</div>
+            <div id="sumtone29" class="color-box">Color 29</div>
+            <div id="sumtone30" class="color-box">Color 30</div>
+            <div id="sumtone31" class="color-box">Color 31</div>
+            <div id="sumtone32" class="color-box">Color 32</div>
+            <div id="sumtone33" class="color-box">Color 33</div>
+            <div id="sumtone34" class="color-box">Color 34</div>
+            <div id="sumtone35" class="color-box">Color 35</div>
+            <div id="sumtone36" class="color-box">Color 36</div>
+            <div id="sumtone37" class="color-box">Color 37</div>
+            <div id="sumtone38" class="color-box">Color 38</div>
+            <div id="sumtone39" class="color-box">Color 39</div>
+            <div id="sumtone40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Mientras que los colores claros y fríos le quedan bien también, toda 
+su colorimetría se percibe más neutra (terrosa) que el verano puro y 
+más clara que el verano oscuro. El cabello no presenta brillos 
+naturales y se ve ratoneado. Los ojos siempre serán desaturados, 
+más allá del tono que presenten.
+En comparación con el Verano Claro, sus tonos son más profundos 
+y algo más neutros. 
+Los mejores colores: visón, gris perla, lavanda sucio, peltre y 
+marrones fríos. Deben evitar todo lo que se vea muy brillante.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="summer-shade">Verano Oscuro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="sums1" class="color-box">Color 1</div>
+            <div id="sums2" class="color-box">Color 2</div>
+            <div id="sums3" class="color-box">Color 3</div>
+            <div id="sums4" class="color-box">Color 4</div>
+            <div id="sums5" class="color-box">Color 5</div>
+            <div id="sums6" class="color-box">Color 6</div>
+            <div id="sums7" class="color-box">Color 7</div>
+            <div id="sums8" class="color-box">Color 8</div>
+            <div id="sums9" class="color-box">Color 9</div>
+            <div id="sums10" class="color-box">Color 10</div>
+            <div id="sums11" class="color-box">Color 11</div>
+            <div id="sums12" class="color-box">Color 12</div>
+            <div id="sums13" class="color-box">Color 13</div>
+            <div id="sums14" class="color-box">Color 14</div>
+            <div id="sums15" class="color-box">Color 15</div>
+            <div id="sums16" class="color-box">Color 16</div>
+            <div id="sums17" class="color-box">Color 17</div>
+            <div id="sums18" class="color-box">Color 18</div>
+            <div id="sums19" class="color-box">Color 19</div>
+            <div id="sums20" class="color-box">Color 20</div>
+            <div id="sums21" class="color-box">Color 21</div>
+            <div id="sums22" class="color-box">Color 22</div>
+            <div id="sums23" class="color-box">Color 23</div>
+            <div id="sums24" class="color-box">Color 24</div>
+            <div id="sums25" class="color-box">Color 25</div>
+            <div id="sums26" class="color-box">Color 26</div>
+            <div id="sums27" class="color-box">Color 27</div>
+            <div id="sums28" class="color-box">Color 28</div>
+            <div id="sums29" class="color-box">Color 29</div>
+            <div id="sums30" class="color-box">Color 30</div>
+            <div id="sums31" class="color-box">Color 31</div>
+            <div id="sums32" class="color-box">Color 32</div>
+            <div id="sums33" class="color-box">Color 33</div>
+            <div id="sums34" class="color-box">Color 34</div>
+            <div id="sums35" class="color-box">Color 35</div>
+            <div id="sums36" class="color-box">Color 36</div>
+            <div id="sums37" class="color-box">Color 37</div>
+            <div id="sums38" class="color-box">Color 38</div>
+            <div id="sums39" class="color-box">Color 39</div>
+            <div id="sums40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Este es el más oscuro de los veranos. Su apariencia es más neutra 
+que el Verano Puro, y más oscura que el Verano Neutro. El cabello 
+no presentará brillo natural y se verá amarronado (como el verano 
+neutro) Los ojos tienen más fuerza que los del verano neutro y se 
+verán no tan fríos como los del verano puro. 
+Los colores de su paleta son los más profundos de todos los 
+veranos y presenta tonalidades algo cálidas también. Muchas 
+veces es confundida con un Invierno Claro, pero no podría soportar 
+las mismas combinaciones ni los tonos tan fríos y puros de un 
+invierno. 
+Los mejores colores: rosa palo oscuro, celeste grisáceo, azulinos 
+verdosos.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="autumn-pure">Otoño Puro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="ap1" class="color-box">Color 1</div>
+            <div id="ap2" class="color-box">Color 2</div>
+            <div id="ap3" class="color-box">Color 3</div>
+            <div id="ap4" class="color-box">Color 4</div>
+            <div id="ap5" class="color-box">Color 5</div>
+            <div id="ap6" class="color-box">Color 6</div>
+            <div id="ap7" class="color-box">Color 7</div>
+            <div id="ap8" class="color-box">Color 8</div>
+            <div id="ap9" class="color-box">Color 9</div>
+            <div id="ap10" class="color-box">Color 10</div>
+            <div id="ap11" class="color-box">Color 11</div>
+            <div id="ap12" class="color-box">Color 12</div>
+            <div id="ap13" class="color-box">Color 13</div>
+            <div id="ap14" class="color-box">Color 14</div>
+            <div id="ap15" class="color-box">Color 15</div>
+            <div id="ap16" class="color-box">Color 16</div>
+            <div id="ap17" class="color-box">Color 17</div>
+            <div id="ap18" class="color-box">Color 18</div>
+            <div id="ap19" class="color-box">Color 19</div>
+            <div id="ap20" class="color-box">Color 20</div>
+            <div id="ap21" class="color-box">Color 21</div>
+            <div id="ap22" class="color-box">Color 22</div>
+            <div id="ap23" class="color-box">Color 23</div>
+            <div id="ap24" class="color-box">Color 24</div>
+            <div id="ap25" class="color-box">Color 25</div>
+            <div id="ap26" class="color-box">Color 26</div>
+            <div id="ap27" class="color-box">Color 27</div>
+            <div id="ap28" class="color-box">Color 28</div>
+            <div id="ap29" class="color-box">Color 29</div>
+            <div id="ap30" class="color-box">Color 30</div>
+            <div id="ap31" class="color-box">Color 31</div>
+            <div id="ap32" class="color-box">Color 32</div>
+            <div id="ap33" class="color-box">Color 33</div>
+            <div id="ap34" class="color-box">Color 34</div>
+            <div id="ap35" class="color-box">Color 35</div>
+            <div id="ap36" class="color-box">Color 36</div>
+            <div id="ap37" class="color-box">Color 37</div>
+            <div id="ap38" class="color-box">Color 38</div>
+            <div id="ap39" class="color-box">Color 39</div>
+            <div id="ap40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Todos los otoños presentan un halo cálido y profundo. Casi siempre 
+presentan una combinación de cabello pelirrojo, ojos verdes y una 
+piel marfil dorada. Aunque también podemos encontrar algunos 
+otoños puros con cabellos castaños rojizos o rubios medios y los 
+ojos celestes o avellana. Las pecas son bastante comunes. Los 
+colores típicos que realzan esta estación son los mismos que 
+encontramos caminando en un bosque de robles en pleno otoño. 
+Los mejores colores: todos los tonos de marrones rojizos, 
+anaranjados y dorados apagados. Todos los tonos que presentan 
+son cálidos y desaturados. Un color que es especialmente 
+desapacible es el fucsia. La gama de verdes, especialmente el 
+oliva, y el óxido son sus aliados. Esta paleta no incluye negro, la 
+mejor alternativa es el marrón y oliva oscuro.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="autumn-tint">Otoño Claro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="atint1" class="color-box">Color 1</div>
+            <div id="atint2" class="color-box">Color 2</div>
+            <div id="atint3" class="color-box">Color 3</div>
+            <div id="atint4" class="color-box">Color 4</div>
+            <div id="atint5" class="color-box">Color 5</div>
+            <div id="atint6" class="color-box">Color 6</div>
+            <div id="atint7" class="color-box">Color 7</div>
+            <div id="atint8" class="color-box">Color 8</div>
+            <div id="atint9" class="color-box">Color 9</div>
+            <div id="atint10" class="color-box">Color 10</div>
+            <div id="atint11" class="color-box">Color 11</div>
+            <div id="atint12" class="color-box">Color 12</div>
+            <div id="atint13" class="color-box">Color 13</div>
+            <div id="atint14" class="color-box">Color 14</div>
+            <div id="atint15" class="color-box">Color 15</div>
+            <div id="atint16" class="color-box">Color 16</div>
+            <div id="atint17" class="color-box">Color 17</div>
+            <div id="atint18" class="color-box">Color 18</div>
+            <div id="atint19" class="color-box">Color 19</div>
+            <div id="atint20" class="color-box">Color 20</div>
+            <div id="atint21" class="color-box">Color 21</div>
+            <div id="atint22" class="color-box">Color 22</div>
+            <div id="atint23" class="color-box">Color 23</div>
+            <div id="atint24" class="color-box">Color 24</div>
+            <div id="atint25" class="color-box">Color 25</div>
+            <div id="atint26" class="color-box">Color 26</div>
+            <div id="atint27" class="color-box">Color 27</div>
+            <div id="atint28" class="color-box">Color 28</div>
+            <div id="atint29" class="color-box">Color 29</div>
+            <div id="atint30" class="color-box">Color 30</div>
+            <div id="atint31" class="color-box">Color 31</div>
+            <div id="atint32" class="color-box">Color 32</div>
+            <div id="atint33" class="color-box">Color 33</div>
+            <div id="atint34" class="color-box">Color 34</div>
+            <div id="atint35" class="color-box">Color 35</div>
+            <div id="atint36" class="color-box">Color 36</div>
+            <div id="atint37" class="color-box">Color 37</div>
+            <div id="atint38" class="color-box">Color 38</div>
+            <div id="atint39" class="color-box">Color 39</div>
+            <div id="atint40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Pensá al Otoño Claro Suave como si fuera un Otoño Puro al que 
+le aclaramos los tonos con algo de blanco. Esto los ilumina y los 
+hace más neutros. No hay mucho contraste entre cabello, piel y 
+ojos (como con la Primavera Clara).
+Los mejores colores: aquellos apagados, terrosos más cálidos que 
+fríos. Si pensamos en verde, en vez del esmeralda, el mejor tono 
+será el verde seco claro. Hay que evitar los tonos brillantes o 
+demasiado oscuros. Tampoco tiene negro. Elegir combinaciones 
+sutiles o la monocromía.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="autumn-tone">Otoño Neutro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="atone1" class="color-box">Color 1</div>
+            <div id="atone2" class="color-box">Color 2</div>
+            <div id="atone3" class="color-box">Color 3</div>
+            <div id="atone4" class="color-box">Color 4</div>
+            <div id="atone5" class="color-box">Color 5</div>
+            <div id="atone6" class="color-box">Color 6</div>
+            <div id="atone7" class="color-box">Color 7</div>
+            <div id="atone8" class="color-box">Color 8</div>
+            <div id="atone9" class="color-box">Color 9</div>
+            <div id="atone10" class="color-box">Color 10</div>
+            <div id="atone11" class="color-box">Color 11</div>
+            <div id="atone12" class="color-box">Color 12</div>
+            <div id="atone13" class="color-box">Color 13</div>
+            <div id="atone14" class="color-box">Color 14</div>
+            <div id="atone15" class="color-box">Color 15</div>
+            <div id="atone16" class="color-box">Color 16</div>
+            <div id="atone17" class="color-box">Color 17</div>
+            <div id="atone18" class="color-box">Color 18</div>
+            <div id="atone19" class="color-box">Color 19</div>
+            <div id="atone20" class="color-box">Color 20</div>
+            <div id="atone21" class="color-box">Color 21</div>
+            <div id="atone22" class="color-box">Color 22</div>
+            <div id="atone23" class="color-box">Color 23</div>
+            <div id="atone24" class="color-box">Color 24</div>
+            <div id="atone25" class="color-box">Color 25</div>
+            <div id="atone26" class="color-box">Color 26</div>
+            <div id="atone27" class="color-box">Color 27</div>
+            <div id="atone28" class="color-box">Color 28</div>
+            <div id="atone29" class="color-box">Color 29</div>
+            <div id="atone30" class="color-box">Color 30</div>
+            <div id="atone31" class="color-box">Color 31</div>
+            <div id="atone32" class="color-box">Color 32</div>
+            <div id="atone33" class="color-box">Color 33</div>
+            <div id="atone34" class="color-box">Color 34</div>
+            <div id="atone35" class="color-box">Color 35</div>
+            <div id="atone36" class="color-box">Color 36</div>
+            <div id="atone37" class="color-box">Color 37</div>
+            <div id="atone38" class="color-box">Color 38</div>
+            <div id="atone39" class="color-box">Color 39</div>
+            <div id="atone40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El otoño neutro es más oscuro que el otoño claro suave y más claro 
+que el otoño oscuro. Es la más neutra de todos los otoños. 
+Los tonos amarronados serán sus mejores aliados. A simple vista 
+da la sensación de pertenecer al otoño oscuro pero sus colores son 
+más vivos.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="autumn-shade">Otoño Oscuro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="as1" class="color-box">Color 1</div>
+            <div id="as2" class="color-box">Color 2</div>
+            <div id="as3" class="color-box">Color 3</div>
+            <div id="as4" class="color-box">Color 4</div>
+            <div id="as5" class="color-box">Color 5</div>
+            <div id="as6" class="color-box">Color 6</div>
+            <div id="as7" class="color-box">Color 7</div>
+            <div id="as8" class="color-box">Color 8</div>
+            <div id="as9" class="color-box">Color 9</div>
+            <div id="as10" class="color-box">Color 10</div>
+            <div id="as11" class="color-box">Color 11</div>
+            <div id="as12" class="color-box">Color 12</div>
+            <div id="as13" class="color-box">Color 13</div>
+            <div id="as14" class="color-box">Color 14</div>
+            <div id="as15" class="color-box">Color 15</div>
+            <div id="as16" class="color-box">Color 16</div>
+            <div id="as17" class="color-box">Color 17</div>
+            <div id="as18" class="color-box">Color 18</div>
+            <div id="as19" class="color-box">Color 19</div>
+            <div id="as20" class="color-box">Color 20</div>
+            <div id="as21" class="color-box">Color 21</div>
+            <div id="as22" class="color-box">Color 22</div>
+            <div id="as23" class="color-box">Color 23</div>
+            <div id="as24" class="color-box">Color 24</div>
+            <div id="as25" class="color-box">Color 25</div>
+            <div id="as26" class="color-box">Color 26</div>
+            <div id="as27" class="color-box">Color 27</div>
+            <div id="as28" class="color-box">Color 28</div>
+            <div id="as29" class="color-box">Color 29</div>
+            <div id="as30" class="color-box">Color 30</div>
+            <div id="as31" class="color-box">Color 31</div>
+            <div id="as32" class="color-box">Color 32</div>
+            <div id="as33" class="color-box">Color 33</div>
+            <div id="as34" class="color-box">Color 34</div>
+            <div id="as35" class="color-box">Color 35</div>
+            <div id="as36" class="color-box">Color 36</div>
+            <div id="as37" class="color-box">Color 37</div>
+            <div id="as38" class="color-box">Color 38</div>
+            <div id="as39" class="color-box">Color 39</div>
+            <div id="as40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Al igual que el Invierno Oscuro, el Otoño Oscuro tiene la 
+característica obvia de presentar cabello y ojos oscuros. Sin 
+embargo, presentan una calidez bastante notoria que puede 
+presentarse en el subtono de su piel o en el matiz de sus ojos o el 
+brillo de sus cabellos. 
+Sus mejores colores: verde pino, esmeralda, óxido, paprika, y 
+pizarra oscuro.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="winter-pure">Invierno Puro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="wp1" class="color-box">Color 1</div>
+            <div id="wp2" class="color-box">Color 2</div>
+            <div id="wp3" class="color-box">Color 3</div>
+            <div id="wp4" class="color-box">Color 4</div>
+            <div id="wp5" class="color-box">Color 5</div>
+            <div id="wp6" class="color-box">Color 6</div>
+            <div id="wp7" class="color-box">Color 7</div>
+            <div id="wp8" class="color-box">Color 8</div>
+            <div id="wp9" class="color-box">Color 9</div>
+            <div id="wp10" class="color-box">Color 10</div>
+            <div id="wp11" class="color-box">Color 11</div>
+            <div id="wp12" class="color-box">Color 12</div>
+            <div id="wp13" class="color-box">Color 13</div>
+            <div id="wp14" class="color-box">Color 14</div>
+            <div id="wp15" class="color-box">Color 15</div>
+            <div id="wp16" class="color-box">Color 16</div>
+            <div id="wp17" class="color-box">Color 17</div>
+            <div id="wp18" class="color-box">Color 18</div>
+            <div id="wp19" class="color-box">Color 19</div>
+            <div id="wp20" class="color-box">Color 20</div>
+            <div id="wp21" class="color-box">Color 21</div>
+            <div id="wp22" class="color-box">Color 22</div>
+            <div id="wp23" class="color-box">Color 23</div>
+            <div id="wp24" class="color-box">Color 24</div>
+            <div id="wp25" class="color-box">Color 25</div>
+            <div id="wp26" class="color-box">Color 26</div>
+            <div id="wp27" class="color-box">Color 27</div>
+            <div id="wp28" class="color-box">Color 28</div>
+            <div id="wp29" class="color-box">Color 29</div>
+            <div id="wp30" class="color-box">Color 30</div>
+            <div id="wp31" class="color-box">Color 31</div>
+            <div id="wp32" class="color-box">Color 32</div>
+            <div id="wp33" class="color-box">Color 33</div>
+            <div id="wp34" class="color-box">Color 34</div>
+            <div id="wp35" class="color-box">Color 35</div>
+            <div id="wp36" class="color-box">Color 36</div>
+            <div id="wp37" class="color-box">Color 37</div>
+            <div id="wp38" class="color-box">Color 38</div>
+            <div id="wp39" class="color-box">Color 39</div>
+            <div id="wp40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            Este es el Invierno con el voltage más alto, los colores fríos más 
+saturados, y los contrastes más jugados. Los colores de sus ojos, al 
+igual que la Primavera Pura, se asemejan a los colores de las 
+piedras preciosas, brillantes y radiantes. El blanco de sus ojos será 
+bien puro y su piel puede ser bien traslúcida. Su cabello siempre 
+oscuro.
+Los mejores colores: todos los que se asemejen a los tonos de las 
+piedras preciosas: esmeralda, zafiro, ruby y amatista. El blanco y 
+negro resaltará su propio contraste y la hará ver más brillante aún. 
+Los colores apagados son su peor enemigo.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="winter-tint">Invierno Claro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="wtint1" class="color-box">Color 1</div>
+            <div id="wtint2" class="color-box">Color 2</div>
+            <div id="wtint3" class="color-box">Color 3</div>
+            <div id="wtint4" class="color-box">Color 4</div>
+            <div id="wtint5" class="color-box">Color 5</div>
+            <div id="wtint6" class="color-box">Color 6</div>
+            <div id="wtint7" class="color-box">Color 7</div>
+            <div id="wtint8" class="color-box">Color 8</div>
+            <div id="wtint9" class="color-box">Color 9</div>
+            <div id="wtint10" class="color-box">Color 10</div>
+            <div id="wtint11" class="color-box">Color 11</div>
+            <div id="wtint12" class="color-box">Color 12</div>
+            <div id="wtint13" class="color-box">Color 13</div>
+            <div id="wtint14" class="color-box">Color 14</div>
+            <div id="wtint15" class="color-box">Color 15</div>
+            <div id="wtint16" class="color-box">Color 16</div>
+            <div id="wtint17" class="color-box">Color 17</div>
+            <div id="wtint18" class="color-box">Color 18</div>
+            <div id="wtint19" class="color-box">Color 19</div>
+            <div id="wtint20" class="color-box">Color 20</div>
+            <div id="wtint21" class="color-box">Color 21</div>
+            <div id="wtint22" class="color-box">Color 22</div>
+            <div id="wtint23" class="color-box">Color 23</div>
+            <div id="wtint24" class="color-box">Color 24</div>
+            <div id="wtint25" class="color-box">Color 25</div>
+            <div id="wtint26" class="color-box">Color 26</div>
+            <div id="wtint27" class="color-box">Color 27</div>
+            <div id="wtint28" class="color-box">Color 28</div>
+            <div id="wtint29" class="color-box">Color 29</div>
+            <div id="wtint30" class="color-box">Color 30</div>
+            <div id="wtint31" class="color-box">Color 31</div>
+            <div id="wtint32" class="color-box">Color 32</div>
+            <div id="wtint33" class="color-box">Color 33</div>
+            <div id="wtint34" class="color-box">Color 34</div>
+            <div id="wtint35" class="color-box">Color 35</div>
+            <div id="wtint36" class="color-box">Color 36</div>
+            <div id="wtint37" class="color-box">Color 37</div>
+            <div id="wtint38" class="color-box">Color 38</div>
+            <div id="wtint39" class="color-box">Color 39</div>
+            <div id="wtint40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El Invierno Claro (Verdadero) es el más frío de los inviernos, no hay 
+colores cálidos en su colorimetría personal. Solo acepta tonos fríos 
+en su paleta, de lo contrario su piel se verá verdosa y parecerá 
+enferma. 
+Los mejores colores: azules (marino, real, chino) turquesas, violetas 
+oscuros, verdes azulados, rojo sangre y ciertos bordó. El amarillo 
+limón les queda increíbele cuando su piel está bronceada. Muchas 
+veces se confunde con una estación cálida, debido a que presenta 
+un brillo dorado como resultado de su exposición al sol.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="winter-tone">Invierno Neutro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="wtone1" class="color-box">Color 1</div>
+            <div id="wtone2" class="color-box">Color 2</div>
+            <div id="wtone3" class="color-box">Color 3</div>
+            <div id="wtone4" class="color-box">Color 4</div>
+            <div id="wtone5" class="color-box">Color 5</div>
+            <div id="wtone6" class="color-box">Color 6</div>
+            <div id="wtone7" class="color-box">Color 7</div>
+            <div id="wtone8" class="color-box">Color 8</div>
+            <div id="wtone9" class="color-box">Color 9</div>
+            <div id="wtone10" class="color-box">Color 10</div>
+            <div id="wtone11" class="color-box">Color 11</div>
+            <div id="wtone12" class="color-box">Color 12</div>
+            <div id="wtone13" class="color-box">Color 13</div>
+            <div id="wtone14" class="color-box">Color 14</div>
+            <div id="wtone15" class="color-box">Color 15</div>
+            <div id="wtone16" class="color-box">Color 16</div>
+            <div id="wtone17" class="color-box">Color 17</div>
+            <div id="wtone18" class="color-box">Color 18</div>
+            <div id="wtone19" class="color-box">Color 19</div>
+            <div id="wtone20" class="color-box">Color 20</div>
+            <div id="wtone21" class="color-box">Color 21</div>
+            <div id="wtone22" class="color-box">Color 22</div>
+            <div id="wtone23" class="color-box">Color 23</div>
+            <div id="wtone24" class="color-box">Color 24</div>
+            <div id="wtone25" class="color-box">Color 25</div>
+            <div id="wtone26" class="color-box">Color 26</div>
+            <div id="wtone27" class="color-box">Color 27</div>
+            <div id="wtone28" class="color-box">Color 28</div>
+            <div id="wtone29" class="color-box">Color 29</div>
+            <div id="wtone30" class="color-box">Color 30</div>
+            <div id="wtone31" class="color-box">Color 31</div>
+            <div id="wtone32" class="color-box">Color 32</div>
+            <div id="wtone33" class="color-box">Color 33</div>
+            <div id="wtone34" class="color-box">Color 34</div>
+            <div id="wtone35" class="color-box">Color 35</div>
+            <div id="wtone36" class="color-box">Color 36</div>
+            <div id="wtone37" class="color-box">Color 37</div>
+            <div id="wtone38" class="color-box">Color 38</div>
+            <div id="wtone39" class="color-box">Color 39</div>
+            <div id="wtone40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El invierno neutro posee una coloración apagada con la 
+profundidad de un invierno. Su armonía pide colores más 
+apagados que los inviernos puros o claros y más claros o luminosos 
+que los colores del invierno oscuro. Puede usar los colores típicos del 
+invierno, pero muchos necesitarán desaturarse para no robarle 
+protagonismo. El alto contraste de los colores brillantes de los otros 
+inviernos puede ser demasiado para esta estación.
+Los mejores colores: aquellos típicos del invierno claro, pero con un 
+toque de desaturación.
           </div>
         </div>
         <div class="season-tile">
           <div class="season-name" id="winter-shade">Invierno Oscuro</div>
           <div class="season-view">
-            <div id="sp1">Color 1</div>
-            <div id="sp2">Color 2</div>
-            <div id="sp3">Color 3</div>
-            <div id="sp4">Color 4</div>
-            <div id="sp5">Color 5</div>
-            <div id="sp6">Color 6</div>
-            <div id="sp7">Color 7</div>
-            <div id="sp8">Color 8</div>
-            <div id="sp9">Color 9</div>
-            <div id="sp10">Color 10</div>
-            <div id="sp11">Color 11</div>
-            <div id="sp12">Color 12</div>
-            <div id="sp13">Color 13</div>
-            <div id="sp14">Color 14</div>
-            <div id="sp15">Color 15</div>
-            <div id="sp16">Color 16</div>
-            <div id="sp17">Color 17</div>
-            <div id="sp18">Color 18</div>
-            <div id="sp19">Color 19</div>
-            <div id="sp20">Color 20</div>
-            <div id="sp21">Color 21</div>
-            <div id="sp22">Color 22</div>
-            <div id="sp23">Color 23</div>
-            <div id="sp24">Color 24</div>
-            <div id="sp25">Color 25</div>
-            <div id="sp26">Color 26</div>
-            <div id="sp27">Color 27</div>
-            <div id="sp28">Color 28</div>
-            <div id="sp29">Color 29</div>
-            <div id="sp30">Color 30</div>
-            <div id="sp31">Color 31</div>
-            <div id="sp32">Color 32</div>
-            <div id="sp33">Color 33</div>
-            <div id="sp34">Color 34</div>
-            <div id="sp35">Color 35</div>
-            <div id="sp36">Color 36</div>
-            <div id="sp37">Color 37</div>
-            <div id="sp38">Color 38</div>
-            <div id="sp39">Color 39</div>
-            <div id="sp40">Color 40</div>
+            <div id="ws1" class="color-box">Color 1</div>
+            <div id="ws2" class="color-box">Color 2</div>
+            <div id="ws3" class="color-box">Color 3</div>
+            <div id="ws4" class="color-box">Color 4</div>
+            <div id="ws5" class="color-box">Color 5</div>
+            <div id="ws6" class="color-box">Color 6</div>
+            <div id="ws7" class="color-box">Color 7</div>
+            <div id="ws8" class="color-box">Color 8</div>
+            <div id="ws9" class="color-box">Color 9</div>
+            <div id="ws10" class="color-box">Color 10</div>
+            <div id="ws11" class="color-box">Color 11</div>
+            <div id="ws12" class="color-box">Color 12</div>
+            <div id="ws13" class="color-box">Color 13</div>
+            <div id="ws14" class="color-box">Color 14</div>
+            <div id="ws15" class="color-box">Color 15</div>
+            <div id="ws16" class="color-box">Color 16</div>
+            <div id="ws17" class="color-box">Color 17</div>
+            <div id="ws18" class="color-box">Color 18</div>
+            <div id="ws19" class="color-box">Color 19</div>
+            <div id="ws20" class="color-box">Color 20</div>
+            <div id="ws21" class="color-box">Color 21</div>
+            <div id="ws22" class="color-box">Color 22</div>
+            <div id="ws23" class="color-box">Color 23</div>
+            <div id="ws24" class="color-box">Color 24</div>
+            <div id="ws25" class="color-box">Color 25</div>
+            <div id="ws26" class="color-box">Color 26</div>
+            <div id="ws27" class="color-box">Color 27</div>
+            <div id="ws28" class="color-box">Color 28</div>
+            <div id="ws29" class="color-box">Color 29</div>
+            <div id="ws30" class="color-box">Color 30</div>
+            <div id="ws31" class="color-box">Color 31</div>
+            <div id="ws32" class="color-box">Color 32</div>
+            <div id="ws33" class="color-box">Color 33</div>
+            <div id="ws34" class="color-box">Color 34</div>
+            <div id="ws35" class="color-box">Color 35</div>
+            <div id="ws36" class="color-box">Color 36</div>
+            <div id="ws37" class="color-box">Color 37</div>
+            <div id="ws38" class="color-box">Color 38</div>
+            <div id="ws39" class="color-box">Color 39</div>
+            <div id="ws40" class="color-box">Color 40</div>
           </div>
           <div class="season-info">
-            Esta primavera es la más brillante y saturada de las cuatro. No
-            encontraremos en su paleta colores apagados o neutros. Los colores
-            que mejor le van son los cálidos saturados, aunque pueden llevar muy
-            bien algunos fríos brillantes. Lo mejor es evitar los colores
-            terrosos o demasiado pálidos, ya que le darán una apariencia muy
-            lavada. Toda su apariencia es de mucho contraste y calidez. Sus ojos
-            serán los que llamen la atención por su brillo, mientras que su piel
-            será dorada o bronce y su cabello con luminosidad.
+            El Invierno Oscuro es fácil de detectar porque presenta ojos y 
+cabello oscuro. La piel es generalmente oscura (aún la beige que 
+tiene un subtono oscuro en comparación con las otras pieles beige). 
+Los mejores colores: aquellos fríos (en su mayoría) que sean 
+profundos y saturados. El negro es EL color de su guardarropas, 
+como el azul noche, y el carbón. Para lograr un look llamativo 
+puede combinar un color oscuro con uno bien saturado (negro con 
+violeta fuerte o carbón y amarillo limón).
           </div>
       </section>
     </main>
