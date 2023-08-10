@@ -327,7 +327,7 @@ function displayQuestion0to2() {
 
       numberOfStep.textContent = "Paso: 2";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+        "Una vez determinada la paleta, se deberá elegir que tonos son los que favorecen el rostro, si los tonos claros o los tonos oscuros.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
       paletteSelection.textContent = "Paleta: Fría";
 
@@ -352,7 +352,7 @@ function displayQuestion0to2() {
 
       numberOfStep.textContent = "Paso: 2";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+        "Una vez determinada la paleta, se deberá elegir que tonos son los que favorecen el rostro, si los tonos claros o los tonos oscuros.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
       paletteSelection.textContent = "Paleta: Cálida";
 
@@ -439,7 +439,7 @@ function displayQuestion3to5() {
 
       numberOfStep.textContent = "Paso: 3";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
+        "Al determinar la paleta y el tono se obtiene la estación principal a la que pertence. Luego para determinar cual de las cuatro subestaciones es la seleccionada se debe elegir que tono es mas favorecedor entre los tonos puros u oscuros.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
       toneSelection.textContent = "Tono: Claro";
 
@@ -451,7 +451,7 @@ function displayQuestion3to5() {
       clearRadioButtons();
 
       if (palette === "cold") {
-        console.log("eres invierno");
+        console.log("Eres invierno");
 
         seasonSelection.textContent = "Estación: Invierno";
         season = "winter";
@@ -464,7 +464,7 @@ function displayQuestion3to5() {
           questions[question].color_2_winter
         );
       } else if (palette === "warm") {
-        console.log("eres otoño");
+        console.log("Eres otoño");
         seasonSelection.textContent = "Estación: Otoño";
         season = "autumn";
         divColor1.style.setProperty(
@@ -479,11 +479,10 @@ function displayQuestion3to5() {
 
       textColor1.textContent = questions[question].text_1;
       textColor2.textContent = questions[question].text_2;
-      toneSelection.textContent = "Tono: Oscuro";
 
       numberOfStep.textContent = "Paso: 3";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. ";
+        "Al determinar la paleta y el tono se obtiene la estación principal a la que pertence. Luego para determinar cual de las cuatro subestaciones es la seleccionada se debe elegir que tono es mas favorecedor entre los tonos puros u oscuros.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
 
       return;
@@ -587,11 +586,11 @@ function displayQuestion6to8() {
 
       numberOfStep.textContent = "Paso: 4";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+        "Por último, al determinar que se está más cerca del tono puro, se debe elegir cual es el tono más favorecedor, si el tono puro o el tono claro.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
 
       return;
-    } else if (question === 8 && counterLightTone < counterDarkTone) {
+    } else if (question === 8 && counterClosenessPure < counterClosenessDark) {
       console.log("Estas mas cerca del tono oscuro!");
       closest = "dark";
       question++;
@@ -632,7 +631,7 @@ function displayQuestion6to8() {
 
       numberOfStep.textContent = "Paso: 4";
       stepInfo.textContent =
-        "Lorem ipsum dolor sit amet consectetur adipiscing, elit faucibus natoque nascetur justo pellentesque convallis, eros mus porttitor curabitur sociosqu. Turpis sollicitudin platea taciti ridiculus posuere dapibus sed sagittis egestas dictumst odio velit, natoque quam nam phasellus magna senectus dui ante facilisi at diam. Augue sem tempor porta cubilia id condimentum potenti, consequat ante sapien eget pulvinar euismod, rutrum netus dui pharetra feugiat hendrerit.";
+        "Por último, al determinar que se está más cerca del tono oscuro, se debe elegir cual es el tono más favorecedor, si el tono neutro o el tono oscuro.";
       numberOfQuestion.textContent = "Pregunta: " + (question + 1) + "/12";
 
       return;
@@ -704,22 +703,22 @@ function displayQuestion9to11() {
       counterTint++;
     } else if (
       radioOption1.checked &&
-      questions[question].counter_1[1] === "tone season"
+      questions[question].counter_1[0] === "tone season"
     ) {
       counterTone++;
     } else if (
       radioOption1.checked &&
-      questions[question].counter_1[1] === "shade season"
+      questions[question].counter_1[0] === "shade season"
     ) {
       counterShade++;
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[0] === "pure season"
+      questions[question].counter_2[1] === "pure season"
     ) {
       counterPure++;
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[0] === "tint season"
+      questions[question].counter_2[1] === "tint season"
     ) {
       counterTint++;
     } else if (
@@ -741,24 +740,28 @@ function displayQuestion9to11() {
         console.log("Eres Primavera Puro");
         seasonTone = "springPure";
         finalSeasonSelection.textContent = "Subestación: Primavera Pura";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#spring-pure");
       } else if (season === "summer") {
         console.log("Eres Verano Puro");
         seasonTone = "summerPure";
         finalSeasonSelection.textContent = "Subestación: Verano Puro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#summer-pure");
       } else if (season === "autumn") {
         console.log("Eres Otoño Puro");
         seasonTone = "autumnPure";
         finalSeasonSelection.textContent = "Subestación: Otoño Puro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#autumn-pure");
       } else if (season === "winter") {
         console.log("Eres Invierno Puro");
         seasonTone = "winterPure";
         finalSeasonSelection.textContent = "Subestación: Invierno Puro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#winter-pure");
       }
@@ -772,24 +775,28 @@ function displayQuestion9to11() {
         console.log("Eres Primavera Claro");
         seasonTone = "springTint";
         finalSeasonSelection.textContent = "Subestación: Primavera Clara";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#spring-tint");
       } else if (season === "summer") {
         console.log("Eres Verano Claro");
         seasonTone = "summerTint";
         finalSeasonSelection.textContent = "Subestación: Verano Claro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#summer-tint");
       } else if (season === "autumn") {
         console.log("Eres Otoño Claro");
         seasonTone = "autumnTint";
         finalSeasonSelection.textContent = "Subestación: Otoño Claro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#autumn-tint");
       } else if (season === "winter") {
         console.log("Eres Invierno Claro");
         seasonTone = "winterTint";
         finalSeasonSelection.textContent = "Subestación: Invierno Claro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#winter-tint");
       }
@@ -803,24 +810,28 @@ function displayQuestion9to11() {
         console.log("Eres Primavera Neutro");
         seasonTone = "springTone";
         finalSeasonSelection.textContent = "Subestación: Primavera Neutra";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#spring-tone");
       } else if (season === "summer") {
         console.log("Eres Verano Neutro");
         seasonTone = "summerTone";
         finalSeasonSelection.textContent = "Subestación: Verano Neutro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#summer-tone");
       } else if (season === "autumn") {
         console.log("Eres Otoño Neutro");
         seasonTone = "autumnTone";
         finalSeasonSelection.textContent = "Subestación: Otoño Neutro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#autumn-tone");
       } else if (season === "winter") {
         console.log("Eres Invierno Neutro");
         seasonTone = "winterTone";
         finalSeasonSelection.textContent = "Subestación: Invierno Neutro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#winter-tone");
       }
@@ -834,24 +845,28 @@ function displayQuestion9to11() {
         console.log("Eres Primavera Oscuro");
         seasonTone = "springShade";
         finalSeasonSelection.textContent = "Subestación: Primavera Oscura";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#spring-shade");
       } else if (season === "summer") {
         console.log("Eres Verano Oscuro");
         seasonTone = "summerShade";
         finalSeasonSelection.textContent = "Subestación: Verano Oscuro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#summer-shade");
       } else if (season === "autumn") {
         console.log("Eres Otoño Oscuro");
         seasonTone = "autumnShade";
         finalSeasonSelection.textContent = "Subestación: Otoño Oscuro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#autumn-shade");
       } else if (season === "winter") {
         console.log("Eres Invierno Oscuro");
         seasonTone = "winterShade";
         finalSeasonSelection.textContent = "Subestación: Invierno Oscuro";
+        nextButton.style.visibility = "hidden";
         characteristicButton.style.visibility = "visible";
         characteristicButton.setAttribute("href", "#winter-shade");
       }

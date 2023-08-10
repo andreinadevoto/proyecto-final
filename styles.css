@@ -218,6 +218,12 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: stretch;
+  justify-content: center;
+}
+
+#step-info {
+  text-align: center;
+  align-self: stretch;
 }
 
 #color-display {
@@ -235,11 +241,12 @@ h1 {
 
 #step,
 #number-of-question {
-  display: inline-block;
+  display: inline;
   text-align: center;
   width: 10%;
   margin: 1vh 20% 0;
   font-size: large;
+  height: 5vh;
 }
 
 #color-1 {
