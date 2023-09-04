@@ -180,7 +180,7 @@ const questions = [
     color_1_winter: ["rgba(107,199,186,255)", "rgba(184,214,214,255)"],
     color_2_spring: ["rgba(0,139,168,255)", "rgba(0,149,143,255)"],
     color_2_summer: ["rgba(130,206,193,255)", "rgba(114,171,190,255)"],
-    color_2_autumn: ["rgba(116,198,184,255)", "rgba(22,169,159,255)k"],
+    color_2_autumn: ["rgba(116,198,184,255)", "rgba(22,169,159,255)"],
     color_2_winter: ["rgba(192,228,226,255)", "rgba(106,189,195,255)"],
     text_1: ["Tono Puro", "Tono Neutro"],
     text_2: ["Tono Claro", "Tono Oscuro"],
@@ -693,44 +693,64 @@ function displayQuestion9to11() {
     console.log("pregunta", question);
     if (
       radioOption1.checked &&
-      questions[question].counter_1[0] === "pure season"
+      questions[question].counter_1[0] === "pure season" &&
+      closest === "pure"
     ) {
       counterPure++;
+      console.log("pure", counterPure);
     } else if (
       radioOption1.checked &&
-      questions[question].counter_1[0] === "tint season"
+      questions[question].counter_1[0] === "tint season" &&
+      closest === "pure"
     ) {
       counterTint++;
+      console.log("tint", counterTint);
     } else if (
       radioOption1.checked &&
-      questions[question].counter_1[0] === "tone season"
+      questions[question].counter_1[1] === "tone season" &&
+      closest === "dark"
     ) {
       counterTone++;
+      console.log("counterTone++");
+      console.log("tone", counterTone);
     } else if (
       radioOption1.checked &&
-      questions[question].counter_1[0] === "shade season"
+      questions[question].counter_1[1] === "shade season" &&
+      closest === "dark"
     ) {
       counterShade++;
+      console.log("counterShade++");
+      console.log("shade", counterShade);
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[1] === "pure season"
+      questions[question].counter_2[0] === "pure season" &&
+      closest === "pure"
     ) {
       counterPure++;
+      console.log("pure", counterPure);
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[1] === "tint season"
+      questions[question].counter_2[0] === "tint season" &&
+      closest === "pure"
     ) {
       counterTint++;
+      console.log(counterTint);
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[1] === "tone season"
+      questions[question].counter_2[1] === "tone season" &&
+      closest === "dark"
     ) {
       counterTone++;
+      console.log("counterTone++");
+      console.log("tone", counterTone);
     } else if (
       radioOption2.checked &&
-      questions[question].counter_2[1] === "shade season"
+      questions[question].counter_2[1] === "shade season" &&
+      closest === "dark"
     ) {
       counterShade++;
+      console.log("counterShade++");
+      console.log("shade", counterShade);
     }
 
     if (question === 11 && closest === "pure" && counterPure > counterTint) {
